@@ -39,7 +39,7 @@ export default function Proyectos() {
             href="/" 
             className="text-sm tracking-[0.3em] uppercase text-stone-800 dark:text-stone-200 hover:text-accent transition-colors"
           >
-            OD&apos;AM
+            OD&apos;ME
           </Link>
           <div className="flex gap-8 text-sm">
             <Link href="/" className="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-all hover:tracking-wider">
