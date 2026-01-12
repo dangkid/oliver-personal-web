@@ -12,7 +12,7 @@ export default function SobreMi() {
             href="/" 
             className="text-sm tracking-[0.3em] uppercase text-stone-800 dark:text-stone-200 hover:text-accent transition-colors"
           >
-            OD'ME
+            OD&apos;AM
           </Link>
           <div className="flex gap-8 text-sm">
             <Link href="/" className="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-all hover:tracking-wider">
@@ -113,7 +113,7 @@ export default function SobreMi() {
                 </div>
                 <div className="space-y-4 text-stone-600 dark:text-stone-400 leading-relaxed">
                   <p className="italic font-serif text-xl">
-                    "La tecnología construye el futuro, pero las palabras dan sentido al presente."
+                    &quot;La tecnología construye el futuro, pero las palabras dan sentido al presente.&quot;
                   </p>
                   <p>
                     Creo que el arte y la ciencia no son opuestos, sino complementarios.
@@ -153,8 +153,8 @@ export default function SobreMi() {
               {/* Quote inspiracional */}
               <div className="p-6 bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900">
                 <p className="font-serif text-lg italic leading-relaxed">
-                  "En el equilibrio entre el código y el verso,
-                  encuentro mi verdadera voz"
+                  &quot;En el equilibrio entre el código y el verso,
+                  encuentro mi verdadera voz&quot;
                 </p>
                 <p className="text-xs mt-4 opacity-70">— Oliver Dangelo</p>
               </div>

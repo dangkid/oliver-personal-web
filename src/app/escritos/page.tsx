@@ -35,7 +35,7 @@ export default function Escritos() {
             href="/" 
             className="text-sm tracking-[0.3em] uppercase text-stone-800 dark:text-stone-200 hover:text-accent transition-colors"
           >
-            OD'AM
+            OD&apos;AM
           </Link>
           <div className="flex gap-8 text-sm">
             <Link href="/" className="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-all hover:tracking-wider">
@@ -114,7 +114,7 @@ export default function Escritos() {
                   </div>
                   
                   <p className="text-lg text-stone-600 dark:text-stone-400 group-hover:text-stone-300 dark:group-hover:text-stone-600 leading-relaxed mb-8 font-light italic">
-                    "{escrito.extracto}"
+                    &quot;{escrito.extracto}&quot;
                   </p>
                   
                   <div className="flex items-center gap-3 text-sm text-accent group-hover:text-stone-400 transition-colors">
@@ -130,9 +130,9 @@ export default function Escritos() {
           <div className="mt-20 p-12 border border-stone-200 dark:border-stone-800 text-center">
             <div className="max-w-2xl mx-auto space-y-4">
               <p className="font-serif text-2xl italic text-stone-700 dark:text-stone-300">
-                "Cada escrito es un pedazo de código emocional,
+                &quot;Cada escrito es un pedazo de código emocional,
                 <br />
-                compilado desde el corazón"
+                compilado desde el corazón&quot;
               </p>
               <div className="h-px w-24 bg-accent mx-auto my-6" />
               <p className="text-sm text-stone-500 dark:text-stone-500">

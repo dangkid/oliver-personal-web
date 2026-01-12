@@ -15,7 +15,7 @@ export default function Galeria() {
             href="/" 
             className="text-sm tracking-[0.3em] uppercase text-stone-800 dark:text-stone-200 hover:text-accent transition-colors"
           >
-            OD'AM
+            OD&apos;AM
           </Link>
           <div className="flex gap-8 text-sm">
             <Link href="/" className="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-all hover:tracking-wider">
@@ -93,9 +93,9 @@ export default function Galeria() {
             <div className="max-w-2xl mx-auto space-y-4">
               <div className="text-4xl mb-4">🎨</div>
               <p className="font-serif text-2xl italic text-stone-700 dark:text-stone-300">
-                "Cada imagen cuenta una historia,
+                &quot;Cada imagen cuenta una historia,
                 <br />
-                cada momento inspira un verso"
+                cada momento inspira un verso&quot;
               </p>
               <div className="h-px w-24 bg-accent mx-auto my-6" />
               <p className="text-sm text-stone-500 dark:text-stone-500">
