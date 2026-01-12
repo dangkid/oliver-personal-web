@@ -1,4 +1,4 @@
-# Instrucciones del Proyecto - Oliver D'Angelo Magallanes
+# Instrucciones del Proyecto - Oliver Dangelo Magallanes
 
 ## Tipo de Proyecto
 Sitio web personal Next.js con TypeScript y Tailwind CSS
@@ -14,7 +14,7 @@ Sitio web personal Next.js con TypeScript y Tailwind CSS
 - [ ] Ejecutar servidor de desarrollo
 
 ## Descripción
-Sitio web personal para Oliver D'Angelo Magallanes Espinoza, estudiante de ASIR de segundo año y escritor. El sitio incluye:
+Sitio web personal para Oliver Dangelo Magallanes Espinoza, estudiante de ASIR de segundo año y escritor. El sitio incluye:
 - Página de inicio con presentación personal
 - Sección de escritos (poemas y poesías)
 - Portfolio de proyectos (estudio y personales)

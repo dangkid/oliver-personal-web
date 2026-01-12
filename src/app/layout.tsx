@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Oliver D'Angelo Magallanes - Escritor & Desarrollador",
-  description: "Sitio personal de Oliver D'Angelo Magallanes Espinoza. Estudiante de ASIR, escritor de poemas y poesías.",
+  title: "Oliver Dangelo Magallanes - Escritor & Desarrollador",
+  description: "Sitio personal de Oliver Dangelo Magallanes Espinoza. Estudiante de ASIR, escritor de poemas y poesías.",
 };
 
 export default function RootLayout({
