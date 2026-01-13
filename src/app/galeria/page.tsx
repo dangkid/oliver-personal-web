@@ -13,120 +13,120 @@ export default function Galeria() {
     {
       id: 1,
       titulo: "Foto 1",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Museo de Bellas Artes de Sevilla",
+      descripcion: "Cuadro de Diego Velasquez en el que se representa a Don Cristobal Súarez de Ribera.",
       imagen: "/images/yo/foto1.jpg",
       categoria: "yo", // Opciones: "yo", "random", "paisajes"
     },
     {
       id: 2,
       titulo: "Foto 2",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Plaza de España, Sevilla",
+      descripcion: "Ubicado frente al puente de Plaza de España",
       imagen: "/images/yo/foto2.jpg",
       categoria: "yo",
     },
     {
       id: 3,
       titulo: "Foto 3",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Playa de Santa Pola, Alicante",
+      descripcion: "Foto de Espaldas frente al mar en la playa de Santa Pola",
       imagen: "/images/yo/foto3.jpg",
       categoria: "yo",
     },
     {
       id: 4,
       titulo: "Foto 4",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Parque de Europa, Madrid",
+      descripcion: "Frente a la representacion de la Torre Eiffel en el Parque de Europa",
       imagen: "/images/yo/foto4.jpg",
       categoria: "yo",
     },
     {
       id: 5,
       titulo: "Foto 5",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Puerta del Puente, Córdoba",
+      descripcion: "Frente a la Puerta del Puente en Córdoba de noche",
       imagen: "/images/yo/foto5.jpg",
       categoria: "yo",
     },
     {
       id: 6,
       titulo: "Foto 6",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Puerta del Puente, Córdoba",
+      descripcion: "Frente a la Puerta del Puente en Córdoba de noche",
       imagen: "/images/yo/foto6.jpg",
       categoria: "yo",
     },
     {
       id: 7,
       titulo: "Foto 7",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Puerta del Puente, Córdoba",
+      descripcion: "De espaldas a la Puerta del Puente en Córdoba de noche",
       imagen: "/images/yo/foto7.jpg",
       categoria: "yo",
     },
     {
       id: 8,
       titulo: "Foto 8",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Patio de los Naranjos, Córdoba",
+      descripcion: "Frente al Patio de los Naranjos en la Mezquita-Catedral de Córdoba",
       imagen: "/images/yo/foto8.jpg",
       categoria: "yo",
     },
     {
       id: 9,
       titulo: "Foto 9",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Calleja de las Flores, Córdoba",
+      descripcion: "Frente a la Calleja de las Flores en Córdoba",
       imagen: "/images/yo/foto9.jpg",
       categoria: "yo",
     },
     {
       id: 10,
       titulo: "Foto 10",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Calleja de las Flores, Córdoba",
+      descripcion: "Frente a la Calleja de las Flores en Córdoba",
       imagen: "/images/yo/foto10.jpg",
       categoria: "yo",
     },
     {
       id: 11,
       titulo: "Foto 11",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Puerta del Puente, Córdoba",
+      descripcion: "Frente a la Puerta del Puente en Córdoba de noche",
       imagen: "/images/yo/foto11.jpg",
       categoria: "yo",
     },
     {
       id: 12,
       titulo: "Foto 12",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Palacio de Viana, Córdoba",
+      descripcion: "Patio inicial del Palacio de Viana en Córdoba",
       imagen: "/images/yo/foto12.jpg",
       categoria: "yo",
     },
     {
       id: 13,
       titulo: "Foto 13",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Palacio de Viana, Córdoba",
+      descripcion: "Patio del Palacio de Viana en Córdoba",
       imagen: "/images/yo/foto13.jpg",
       categoria: "yo",
     },
     {
       id: 14,
       titulo: "Foto 14",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
+      ubicacion: "Patio de los Naranjos, Córdoba",
+      descripcion: "Frente al Patio de los Naranjos en la Mezquita-Catedral de Córdoba",
       imagen: "/images/yo/foto14.jpg",
       categoria: "yo",
     },
   ];
 
   // Filtrar fotos por categoría
-  const fotosFiltradas = categoriaActiva === "todas" 
-    ? fotos 
+  const fotosFiltradas = categoriaActiva === "todas"
+    ? fotos
     : fotos.filter(foto => foto.categoria === categoriaActiva);
 
   return (
@@ -134,8 +134,8 @@ export default function Galeria() {
       {/* Navegación */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-6 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-sm border-b border-stone-200 dark:border-stone-800">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="text-sm tracking-[0.3em] uppercase text-stone-800 dark:text-stone-200 hover:text-accent transition-colors"
           >
             OD&apos;ME
@@ -189,11 +189,10 @@ export default function Galeria() {
               <button
                 key={categoria.id}
                 onClick={() => setCategoriaActiva(categoria.id)}
-                className={`px-6 py-2 text-sm tracking-wider transition-all duration-300 ${
-                  categoriaActiva === categoria.id
+                className={`px-6 py-2 text-sm tracking-wider transition-all duration-300 ${categoriaActiva === categoria.id
                     ? "bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900"
                     : "bg-stone-100 dark:bg-stone-900 text-stone-900 dark:text-stone-100 hover:bg-stone-200 dark:hover:bg-stone-800"
-                }`}
+                  }`}
               >
                 {categoria.label}
               </button>
@@ -203,11 +202,10 @@ export default function Galeria() {
           {/* Grid asimétrico de imágenes */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-1 bg-stone-300 dark:bg-stone-700">
             {fotosFiltradas.map((foto, i) => (
-              <div 
+              <div
                 key={foto.id}
-                className={`group relative overflow-hidden bg-stone-200 dark:bg-stone-800 cursor-pointer transition-all duration-500 hover:z-10 ${
-                  i === 0 || i === 11 ? 'md:col-span-2 md:row-span-2' : 'aspect-square'
-                }`}
+                className={`group relative overflow-hidden bg-stone-200 dark:bg-stone-800 cursor-pointer transition-all duration-500 hover:z-10 ${i === 0 || i === 11 ? 'md:col-span-2 md:row-span-2' : 'aspect-square'
+                  }`}
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 style={{
