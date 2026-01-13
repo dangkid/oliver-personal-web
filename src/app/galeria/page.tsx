@@ -15,7 +15,7 @@ export default function Galeria() {
       titulo: "Foto 1",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto1.jpg",
+      imagen: "/images/yo/foto1.jpg",
       categoria: "yo", // Opciones: "yo", "random", "paisajes"
     },
     {
@@ -23,7 +23,7 @@ export default function Galeria() {
       titulo: "Foto 2",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto2.jpg",
+      imagen: "/images/yo/foto2.jpg",
       categoria: "yo",
     },
     {
@@ -31,7 +31,7 @@ export default function Galeria() {
       titulo: "Foto 3",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto3.jpg",
+      imagen: "/images/yo/foto3.jpg",
       categoria: "yo",
     },
     {
@@ -39,7 +39,7 @@ export default function Galeria() {
       titulo: "Foto 4",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto4.jpg",
+      imagen: "/images/yo/foto4.jpg",
       categoria: "yo",
     },
     {
@@ -47,7 +47,7 @@ export default function Galeria() {
       titulo: "Foto 5",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto5.jpg",
+      imagen: "/images/yo/foto5.jpg",
       categoria: "yo",
     },
     {
@@ -55,7 +55,7 @@ export default function Galeria() {
       titulo: "Foto 6",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto6.jpg",
+      imagen: "/images/yo/foto6.jpg",
       categoria: "yo",
     },
     {
@@ -63,7 +63,7 @@ export default function Galeria() {
       titulo: "Foto 7",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto7.jpg",
+      imagen: "/images/yo/foto7.jpg",
       categoria: "yo",
     },
     {
@@ -71,7 +71,7 @@ export default function Galeria() {
       titulo: "Foto 8",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto8.jpg",
+      imagen: "/images/yo/foto8.jpg",
       categoria: "yo",
     },
     {
@@ -79,7 +79,7 @@ export default function Galeria() {
       titulo: "Foto 9",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto9.jpg",
+      imagen: "/images/yo/foto9.jpg",
       categoria: "yo",
     },
     {
@@ -87,7 +87,7 @@ export default function Galeria() {
       titulo: "Foto 10",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto10.jpg",
+      imagen: "/images/yo/foto10.jpg",
       categoria: "yo",
     },
     {
@@ -95,7 +95,7 @@ export default function Galeria() {
       titulo: "Foto 11",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto11.jpg",
+      imagen: "/images/yo/foto11.jpg",
       categoria: "yo",
     },
     {
@@ -103,7 +103,7 @@ export default function Galeria() {
       titulo: "Foto 12",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto12.jpg",
+      imagen: "/images/yo/foto12.jpg",
       categoria: "yo",
     },
     {
@@ -111,7 +111,7 @@ export default function Galeria() {
       titulo: "Foto 13",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto13.jpg",
+      imagen: "/images/yo/foto13.jpg",
       categoria: "yo",
     },
     {
@@ -119,7 +119,7 @@ export default function Galeria() {
       titulo: "Foto 14",
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
-      imagen: "/images/foto14.jpg",
+      imagen: "/images/yo/foto14.jpg",
       categoria: "yo",
     },
   ];
