@@ -108,8 +108,6 @@ export default function Galeria() {
       imagen: "/images/foto14.jpg",
     },
   ];
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-stone-950">
