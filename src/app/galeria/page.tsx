@@ -16,7 +16,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto1.jpg",
-      categoria: "paisajes", // Opciones: "yo", "random", "paisajes"
+      categoria: "yo", // Opciones: "yo", "random", "paisajes"
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto2.jpg",
-      categoria: "paisajes",
+      categoria: "yo",
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto4.jpg",
-      categoria: "random",
+      categoria: "yo",
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto5.jpg",
-      categoria: "paisajes",
+      categoria: "yo",
     },
     {
       id: 6,
@@ -64,7 +64,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto7.jpg",
-      categoria: "random",
+      categoria: "yo",
     },
     {
       id: 8,
@@ -72,7 +72,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto8.jpg",
-      categoria: "paisajes",
+      categoria: "yo",
     },
     {
       id: 9,
@@ -88,7 +88,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto10.jpg",
-      categoria: "random",
+      categoria: "yo",
     },
     {
       id: 11,
@@ -96,7 +96,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto11.jpg",
-      categoria: "paisajes",
+      categoria: "yo",
     },
     {
       id: 12,
@@ -112,7 +112,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto13.jpg",
-      categoria: "random",
+      categoria: "yo",
     },
     {
       id: 14,
@@ -120,7 +120,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto14.jpg",
-      categoria: "paisajes",
+      categoria: "yo",
     },
   ];
 
