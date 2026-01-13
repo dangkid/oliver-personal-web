@@ -1,98 +1,203 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Galeria() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  // Aquí puedes agregar tus fotos con título, descripción y ubicación
+  // Tus fotos - Puedes editar los títulos, ubicaciones y descripciones
   const fotos = [
     {
       id: 1,
-      titulo: "Atardecer en la montaña",
-      ubicacion: "Sierra Nevada",
-      descripcion: "Un momento de paz entre las nubes",
-      imagen: "/images/foto1.jpg", // Coloca tus fotos en public/images/
+      titulo: "Foto 1",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto1.jpg",
     },
     {
       id: 2,
-      titulo: "Ciudad nocturna",
-      ubicacion: "Madrid",
-      descripcion: "Luces que inspiran palabras",
+      titulo: "Foto 2",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
       imagen: "/images/foto2.jpg",
     },
     {
       id: 3,
-      titulo: "Playa al amanecer",
-      ubicacion: "Málaga",
-      descripcion: "Donde las olas escriben poesía",
+      titulo: "Foto 3",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
       imagen: "/images/foto3.jpg",
     },
     {
       id: 4,
-      titulo: "Bosque de otoño",
-      ubicacion: "Asturias",
-      descripcion: "Colores que alimentan la creatividad",
+      titulo: "Foto 4",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
       imagen: "/images/foto4.jpg",
     },
     {
       id: 5,
-      titulo: "Arquitectura moderna",
-      ubicacion: "Valencia",
-      descripcion: "Donde el arte se encuentra con la estructura",
+      titulo: "Foto 5",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
       imagen: "/images/foto5.jpg",
     },
     {
       id: 6,
-      titulo: "Calleja histórica",
-      ubicacion: "Toledo",
-      descripcion: "Historias entre adoquines",
+      titulo: "Foto 6",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
       imagen: "/images/foto6.jpg",
     },
     {
       id: 7,
-      titulo: "Lago tranquilo",
-      ubicacion: "Pirineos",
-      descripcion: "Reflexiones en el agua",
+      titulo: "Foto 7",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
       imagen: "/images/foto7.jpg",
     },
     {
       id: 8,
-      titulo: "Vista urbana",
-      ubicacion: "Barcelona",
-      descripcion: "La ciudad que nunca duerme",
+      titulo: "Foto 8",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
       imagen: "/images/foto8.jpg",
     },
     {
       id: 9,
-      titulo: "Campo de flores",
-      ubicacion: "Andalucía",
-      descripcion: "Un lienzo natural",
+      titulo: "Foto 9",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
       imagen: "/images/foto9.jpg",
     },
     {
       id: 10,
-      titulo: "Estación de tren",
-      ubicacion: "Sevilla",
-      descripcion: "Partidas y llegadas",
+      titulo: "Foto 10",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
       imagen: "/images/foto10.jpg",
     },
     {
       id: 11,
-      titulo: "Café literario",
-      ubicacion: "Granada",
-      descripcion: "Donde nacen las ideas",
+      titulo: "Foto 11",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
       imagen: "/images/foto11.jpg",
     },
     {
       id: 12,
-      titulo: "Puente antiguo",
-      ubicacion: "Ronda",
-      descripcion: "Conectando tiempos",
+      titulo: "Foto 12",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
       imagen: "/images/foto12.jpg",
     },
-    // Puedes seguir agregando más fotos aquí
+    {
+      id: 13,
+      titulo: "Foto 13",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto13.jpg",
+    },
+    {
+      id: 14,
+      titulo: "Foto 14",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto14.jpg",
+    },
+    {
+      id: 15,
+      titulo: "Foto 15",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto15.jpg",
+    },
+    {
+      id: 16,
+      titulo: "Foto 16",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto16.jpg",
+    },
+    {
+      id: 17,
+      titulo: "Foto 17",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto17.jpg",
+    },
+    {
+      id: 18,
+      titulo: "Foto 18",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto18.jpg",
+    },
+    {
+      id: 19,
+      titulo: "Foto 19",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto19.jpg",
+    },
+    {
+      id: 20,
+      titulo: "Foto 20",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto20.jpg",
+    },
+    {
+      id: 21,
+      titulo: "Foto 21",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto21.jpg",
+    },
+    {
+      id: 22,
+      titulo: "Foto 22",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto22.jpg",
+    },
+    {
+      id: 23,
+      titulo: "Foto 23",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto23.jpg",
+    },
+    {
+      id: 24,
+      titulo: "Foto 24",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto24.jpg",
+    },
+    {
+      id: 25,
+      titulo: "Foto 25",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto25.jpg",
+    },
+    {
+      id: 26,
+      titulo: "Foto 26",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto26.jpg",
+    },
+    {
+      id: 27,
+      titulo: "Foto 27",
+      ubicacion: "Ubicación",
+      descripcion: "Descripción de la foto",
+      imagen: "/images/foto27.jpg",
+    },
   ];
 
   return (
@@ -158,47 +263,36 @@ export default function Galeria() {
                   transform: hoveredIndex === i ? 'scale(1.05)' : 'scale(1)',
                 }}
               >
-                {/* Placeholder - Reemplaza con tus imágenes reales */}
-                <div className="w-full h-full flex items-center justify-center relative bg-gradient-to-br from-stone-300 to-stone-400 dark:from-stone-700 dark:to-stone-800">
-                  {/* Overlay oscuro al hacer hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-stone-900/90 to-stone-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  {/* Icono placeholder (eliminar cuando agregues fotos reales) */}
-                  <div className="text-4xl md:text-6xl opacity-20 group-hover:opacity-0 transition-opacity">
-                    📸
-                  </div>
+                {/* Imagen real */}
+                <Image
+                  src={foto.imagen}
+                  alt={foto.titulo}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
 
-                  {/* Información que aparece al hacer hover */}
-                  <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                    <div className="space-y-2">
-                      <p className="text-xs tracking-[0.2em] uppercase text-stone-400">
-                        {foto.ubicacion}
-                      </p>
-                      <h3 className="font-serif text-xl md:text-2xl text-white font-medium">
-                        {foto.titulo}
-                      </h3>
-                      <div className="h-px w-16 bg-white/50" />
-                      <p className="text-sm text-stone-300 italic">
-                        {foto.descripcion}
-                      </p>
-                    </div>
-                  </div>
+                {/* Overlay oscuro al hacer hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-stone-900/90 to-stone-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                  {/* Borde decorativo al hover */}
-                  <div className="absolute inset-4 border border-white/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                {/* Información que aparece al hacer hover */}
+                <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                  <div className="space-y-2">
+                    <p className="text-xs tracking-[0.2em] uppercase text-stone-400">
+                      {foto.ubicacion}
+                    </p>
+                    <h3 className="font-serif text-xl md:text-2xl text-white font-medium">
+                      {foto.titulo}
+                    </h3>
+                    <div className="h-px w-16 bg-white/50" />
+                    <p className="text-sm text-stone-300 italic">
+                      {foto.descripcion}
+                    </p>
+                  </div>
                 </div>
 
-                {/* 
-                  Para usar tus fotos reales, descomenta esto y comenta el div de arriba:
-                  
-                  <Image
-                    src={foto.imagen}
-                    alt={foto.titulo}
-                    fill
-                    className="object-cover"
-                    loading="lazy"
-                  />
-                */}
+                {/* Borde decorativo al hover */}
+                <div className="absolute inset-4 border border-white/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
           </div>
