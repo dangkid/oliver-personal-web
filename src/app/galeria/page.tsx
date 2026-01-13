@@ -132,28 +132,28 @@ export default function Galeria() {
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-stone-950">
       {/* Navegación */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-6 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-sm border-b border-stone-200 dark:border-stone-800">
+      <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4 md:py-6 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-sm border-b border-stone-200 dark:border-stone-800">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link
             href="/"
-            className="text-sm tracking-[0.3em] uppercase text-stone-800 dark:text-stone-200 hover:text-accent transition-colors"
+            className="text-xs md:text-sm tracking-[0.3em] uppercase text-stone-800 dark:text-stone-200 hover:text-accent transition-colors"
           >
             OD&apos;ME
           </Link>
-          <div className="flex gap-8 text-sm">
+          <div className="flex gap-3 md:gap-8 text-xs md:text-sm">
             <Link href="/" className="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-all hover:tracking-wider">
               Inicio
             </Link>
             <Link href="/escritos" className="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-all hover:tracking-wider">
               Escritos
             </Link>
-            <Link href="/proyectos" className="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-all hover:tracking-wider">
+            <Link href="/proyectos" className="hidden sm:block text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-all hover:tracking-wider">
               Proyectos
             </Link>
             <Link href="/galeria" className="text-stone-900 dark:text-stone-100 font-medium">
               Galería
             </Link>
-            <Link href="/sobre-mi" className="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-all hover:tracking-wider">
+            <Link href="/sobre-mi" className="hidden md:block text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-all hover:tracking-wider">
               Sobre mí
             </Link>
           </div>
@@ -161,25 +161,25 @@ export default function Galeria() {
       </nav>
 
       {/* Contenido */}
-      <main className="pt-32 pb-20 px-8">
+      <main className="pt-24 md:pt-32 pb-12 md:pb-20 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="mb-20 text-center">
-            <p className="text-sm tracking-[0.3em] uppercase text-accent mb-6">
+          <div className="mb-12 md:mb-20 text-center">
+            <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-accent mb-4 md:mb-6">
               Colección Visual
             </p>
-            <h1 className="font-serif text-6xl md:text-7xl text-stone-900 dark:text-stone-50 mb-6">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-stone-900 dark:text-stone-50 mb-4 md:mb-6">
               Galería
             </h1>
-            <div className="h-px w-32 bg-accent mx-auto mb-8" />
-            <p className="text-xl text-stone-600 dark:text-stone-400 max-w-2xl mx-auto font-light leading-relaxed">
+            <div className="h-px w-24 md:w-32 bg-accent mx-auto mb-6 md:mb-8" />
+            <p className="text-base md:text-xl text-stone-600 dark:text-stone-400 max-w-2xl mx-auto font-light leading-relaxed px-4">
               Momentos capturados que inspiran palabras,
               lugares que despiertan la creatividad
             </p>
           </div>
 
           {/* Filtros de categoría */}
-          <div className="flex justify-center gap-4 mb-12 flex-wrap">
+          <div className="flex justify-center gap-2 md:gap-4 mb-8 md:mb-12 flex-wrap px-2">
             {[
               { id: "todas", label: "Todas" },
               { id: "yo", label: "Yo" },
@@ -189,7 +189,7 @@ export default function Galeria() {
               <button
                 key={categoria.id}
                 onClick={() => setCategoriaActiva(categoria.id)}
-                className={`px-6 py-2 text-sm tracking-wider transition-all duration-300 ${categoriaActiva === categoria.id
+                className={`px-4 md:px-6 py-2 text-xs md:text-sm tracking-wider transition-all duration-300 ${categoriaActiva === categoria.id
                     ? "bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900"
                     : "bg-stone-100 dark:bg-stone-900 text-stone-900 dark:text-stone-100 hover:bg-stone-200 dark:hover:bg-stone-800"
                   }`}
@@ -200,7 +200,7 @@ export default function Galeria() {
           </div>
 
           {/* Grid asimétrico de imágenes */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-1 bg-stone-300 dark:bg-stone-700">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-0.5 md:gap-1 bg-stone-300 dark:bg-stone-700">
             {fotosFiltradas.map((foto, i) => (
               <div
                 key={foto.id}
@@ -225,16 +225,16 @@ export default function Galeria() {
                 <div className="absolute inset-0 bg-gradient-to-br from-stone-900/90 to-stone-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Información que aparece al hacer hover */}
-                <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                  <div className="space-y-2">
-                    <p className="text-xs tracking-[0.2em] uppercase text-stone-400">
+                <div className="absolute inset-0 p-4 md:p-6 lg:p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                  <div className="space-y-1 md:space-y-2">
+                    <p className="text-[10px] md:text-xs tracking-[0.2em] uppercase text-stone-400">
                       {foto.ubicacion}
                     </p>
-                    <h3 className="font-serif text-xl md:text-2xl text-white font-medium">
+                    <h3 className="font-serif text-base md:text-xl lg:text-2xl text-white font-medium">
                       {foto.titulo}
                     </h3>
-                    <div className="h-px w-16 bg-white/50" />
-                    <p className="text-sm text-stone-300 italic">
+                    <div className="h-px w-12 md:w-16 bg-white/50" />
+                    <p className="text-xs md:text-sm text-stone-300 italic line-clamp-2">
                       {foto.descripcion}
                     </p>
                   </div>
