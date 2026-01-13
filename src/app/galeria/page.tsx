@@ -166,7 +166,7 @@ export default function Galeria() {
               <div 
                 key={foto.id}
                 className={`group relative overflow-hidden bg-stone-200 dark:bg-stone-800 cursor-pointer transition-all duration-500 hover:z-10 ${
-                  i === 0 || i === 7 ? 'md:col-span-2 md:row-span-2' : 'aspect-square'
+                  i === 0 || i === 11 ? 'md:col-span-2 md:row-span-2' : 'aspect-square'
                 }`}
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(null)}
