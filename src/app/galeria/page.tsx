@@ -6,8 +6,9 @@ import { useState } from "react";
 
 export default function Galeria() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [categoriaActiva, setCategoriaActiva] = useState<string>("todas");
 
-  // Tus fotos - Puedes editar los títulos, ubicaciones y descripciones
+  // Tus fotos - Puedes editar los títulos, ubicaciones, descripciones y categorías
   const fotos = [
     {
       id: 1,
@@ -15,6 +16,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto1.jpg",
+      categoria: "paisajes", // Opciones: "yo", "random", "paisajes"
     },
     {
       id: 2,
@@ -22,6 +24,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto2.jpg",
+      categoria: "paisajes",
     },
     {
       id: 3,
@@ -29,6 +32,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto3.jpg",
+      categoria: "yo",
     },
     {
       id: 4,
@@ -36,6 +40,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto4.jpg",
+      categoria: "random",
     },
     {
       id: 5,
@@ -43,6 +48,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto5.jpg",
+      categoria: "paisajes",
     },
     {
       id: 6,
@@ -50,6 +56,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto6.jpg",
+      categoria: "yo",
     },
     {
       id: 7,
@@ -57,6 +64,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto7.jpg",
+      categoria: "random",
     },
     {
       id: 8,
@@ -64,6 +72,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto8.jpg",
+      categoria: "paisajes",
     },
     {
       id: 9,
@@ -71,6 +80,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto9.jpg",
+      categoria: "yo",
     },
     {
       id: 10,
@@ -78,6 +88,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto10.jpg",
+      categoria: "random",
     },
     {
       id: 11,
@@ -85,6 +96,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto11.jpg",
+      categoria: "paisajes",
     },
     {
       id: 12,
@@ -92,6 +104,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto12.jpg",
+      categoria: "yo",
     },
     {
       id: 13,
@@ -99,6 +112,7 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto13.jpg",
+      categoria: "random",
     },
     {
       id: 14,
@@ -106,8 +120,14 @@ export default function Galeria() {
       ubicacion: "Ubicación",
       descripcion: "Descripción de la foto",
       imagen: "/images/foto14.jpg",
+      categoria: "paisajes",
     },
   ];
+
+  // Filtrar fotos por categoría
+  const fotosFiltradas = categoriaActiva === "todas" 
+    ? fotos 
+    : fotos.filter(foto => foto.categoria === categoriaActiva);
 
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-stone-950">
@@ -158,9 +178,31 @@ export default function Galeria() {
             </p>
           </div>
 
+          {/* Filtros de categoría */}
+          <div className="flex justify-center gap-4 mb-12 flex-wrap">
+            {[
+              { id: "todas", label: "Todas" },
+              { id: "yo", label: "Yo" },
+              { id: "random", label: "Random" },
+              { id: "paisajes", label: "Paisajes" },
+            ].map((categoria) => (
+              <button
+                key={categoria.id}
+                onClick={() => setCategoriaActiva(categoria.id)}
+                className={`px-6 py-2 text-sm tracking-wider transition-all duration-300 ${
+                  categoriaActiva === categoria.id
+                    ? "bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900"
+                    : "bg-stone-100 dark:bg-stone-900 text-stone-900 dark:text-stone-100 hover:bg-stone-200 dark:hover:bg-stone-800"
+                }`}
+              >
+                {categoria.label}
+              </button>
+            ))}
+          </div>
+
           {/* Grid asimétrico de imágenes */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-1 bg-stone-300 dark:bg-stone-700">
-            {fotos.map((foto, i) => (
+            {fotosFiltradas.map((foto, i) => (
               <div 
                 key={foto.id}
                 className={`group relative overflow-hidden bg-stone-200 dark:bg-stone-800 cursor-pointer transition-all duration-500 hover:z-10 ${
