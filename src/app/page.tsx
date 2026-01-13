@@ -99,25 +99,36 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Columna derecha - Elemento visual artístico */}
+            {/* Columna derecha - Video artístico */}
             <div className={`relative h-[400px] md:h-[500px] lg:h-[600px] mt-12 lg:mt-0 ${isLoaded ? 'animate-fadeIn' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
               {/* Marco decorativo animado */}
               <div className="absolute inset-0 border border-stone-300 dark:border-stone-700 transform rotate-2 md:rotate-3 transition-transform hover:rotate-4 md:hover:rotate-6 duration-700" />
               <div className="absolute inset-0 border border-stone-300 dark:border-stone-700 transform -rotate-2 md:-rotate-3 transition-transform hover:-rotate-4 md:hover:-rotate-6 duration-700" />
               
-              {/* Contenedor central con efecto */}
-              <div className="absolute inset-4 md:inset-8 bg-gradient-to-br from-stone-200 to-stone-300 dark:from-stone-800 dark:to-stone-900 flex items-center justify-center overflow-hidden group">
-                <div className="text-center space-y-4 md:space-y-6 p-6 md:p-8 relative z-10">
-                  <div className="text-5xl md:text-6xl animate-float">✍️</div>
-                  <p className="font-serif text-xl md:text-2xl italic text-stone-700 dark:text-stone-300 px-4">
-                    &quot;El código construye,
-                    <br />
-                    la poesía da sentido&quot;
-                  </p>
-                  <div className="text-xs md:text-sm tracking-widest text-stone-500">— O.D.M</div>
+              {/* Contenedor central con video */}
+              <div className="absolute inset-4 md:inset-8 overflow-hidden group">
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source src="/videos/IMG_2008.MOV" type="video/mp4" />
+                </video>
+                {/* Overlay oscuro sutil */}
+                <div className="absolute inset-0 bg-stone-900/20 dark:bg-stone-950/30 group-hover:bg-stone-900/10 dark:group-hover:bg-stone-950/20 transition-all duration-500" />
+                {/* Texto overlay */}
+                <div className="absolute inset-0 flex items-end justify-center p-6 md:p-8">
+                  <div className="text-center space-y-2 md:space-y-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <p className="font-serif text-lg md:text-xl italic text-stone-50 drop-shadow-lg">
+                      &quot;El código construye,
+                      <br />
+                      la poesía da sentido&quot;
+                    </p>
+                    <div className="text-xs md:text-sm tracking-widest text-stone-200">— O.D.M</div>
+                  </div>
                 </div>
-                {/* Efecto de overlay al hover */}
-                <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
               </div>
             </div>
           </div>
