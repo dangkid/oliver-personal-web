@@ -257,9 +257,8 @@ export default function Galeria() {
               </p>
               <div className="h-px w-24 bg-accent mx-auto my-6" />
               <p className="text-sm text-stone-500 dark:text-stone-500">
-                Coloca tus fotos de viajes, momentos especiales e imágenes inspiradoras en la carpeta{' '}
-                <span className="font-mono text-xs px-2 py-1 bg-stone-100 dark:bg-stone-900">public/images</span>
-                {' '}para que aparezcan aquí.
+                Una colección en constante crecimiento de lugares visitados, momentos vividos
+                y recuerdos que se transforman en inspiración creativa.
               </p>
             </div>
           </div>

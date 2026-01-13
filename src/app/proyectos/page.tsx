@@ -182,8 +182,8 @@ export default function Proyectos() {
               </p>
               <div className="h-px w-16 md:w-24 bg-accent mx-auto my-4 md:my-6" />
               <p className="text-xs md:text-sm text-stone-500 dark:text-stone-500 px-4">
-                Documenta aquí tus proyectos de ASIR y desarrollos personales.
-                Incluye documentación técnica, diagramas y aprendizajes.
+                Portfolio en evolución donde cada proyecto representa un paso más
+                en el camino del aprendizaje continuo y la experimentación técnica.
               </p>
             </div>
           </div>

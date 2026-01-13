@@ -136,8 +136,8 @@ export default function Escritos() {
               </p>
               <div className="h-px w-16 md:w-24 bg-accent mx-auto my-4 md:my-6" />
               <p className="text-xs md:text-sm text-stone-500 dark:text-stone-500 px-4">
-                Este es tu espacio para compartir tus poemas, reflexiones y pensamientos.
-                Edita esta página para agregar tu contenido literario.
+                Una colección en construcción de versos, pensamientos y reflexiones
+                nacidas entre el código y la contemplación del mundo.
               </p>
             </div>
           </div>
