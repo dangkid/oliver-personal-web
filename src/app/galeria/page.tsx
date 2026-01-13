@@ -107,12 +107,7 @@ export default function Galeria() {
       descripcion: "Descripción de la foto",
       imagen: "/images/foto14.jpg",
     },
-    {
-      id: 14,
-      titulo: "Foto 14",
-      ubicacion: "Ubicación",
-      descripcion: "Descripción de la foto",
-      imagen: "/images/foto14.jpg",
+  ];
     },
   ];
 
