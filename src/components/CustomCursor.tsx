@@ -38,45 +38,33 @@ export default function CustomCursor() {
   if (!isVisible) return null;
 
   return (
-    <>
-      {/* Cursor principal - Cruz artística */}
+    <div
+      className="fixed pointer-events-none z-[9999] hidden md:block"
+      style={{
+        left: `${position.x}px`,
+        top: `${position.y}px`,
+        transform: 'translate(-50%, -50%)',
+      }}
+    >
+      {/* Punto central */}
       <div
-        className="fixed pointer-events-none z-[9999] mix-blend-difference hidden md:block"
-        style={{
-          left: `${position.x}px`,
-          top: `${position.y}px`,
-          transform: 'translate(-50%, -50%)',
-          transition: 'transform 0.05s ease-out',
-        }}
-      >
-        <div
-          className={`transition-all duration-200 ${
-            isHovering ? 'scale-150 rotate-45' : 'scale-100'
-          }`}
-        >
-          {/* Cruz vertical */}
-          <div className="absolute w-[2px] h-6 bg-stone-50 -translate-x-1/2 -translate-y-1/2" />
-          {/* Cruz horizontal */}
-          <div className="absolute h-[2px] w-6 bg-stone-50 -translate-x-1/2 -translate-y-1/2" />
-        </div>
-      </div>
-
-      {/* Cursor secundario - Círculo de seguimiento */}
+        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent transition-all duration-200 ${
+          isHovering ? 'w-2 h-2' : 'w-1.5 h-1.5'
+        }`}
+      />
+      
+      {/* Círculo exterior */}
       <div
-        className="fixed pointer-events-none z-[9998] hidden md:block"
+        className={`rounded-full border border-accent transition-all duration-200 ${
+          isHovering ? 'w-10 h-10 opacity-60' : 'w-8 h-8 opacity-40'
+        }`}
         style={{
-          left: `${position.x}px`,
-          top: `${position.y}px`,
           transform: 'translate(-50%, -50%)',
-          transition: 'all 0.15s cubic-bezier(0.75, 0, 0.27, 1)',
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
         }}
-      >
-        <div
-          className={`border-2 border-accent rounded-full transition-all duration-200 ${
-            isHovering ? 'w-12 h-12 opacity-50' : 'w-8 h-8 opacity-30'
-          }`}
-        />
-      </div>
-    </>
+      />
+    </div>
   );
 }
