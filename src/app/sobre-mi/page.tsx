@@ -187,6 +187,150 @@ export default function SobreMi() {
               </div>
             </div>
           </div>
+
+          {/* Nueva sección: Experiencia y Certificaciones */}
+          <div className="mt-16 md:mt-24">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-900 dark:text-stone-50 mb-8 md:mb-12 text-center">
+              Formación y Experiencia
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+              {/* Educación */}
+              <div className="space-y-6">
+                <h3 className="text-sm tracking-[0.2em] uppercase text-accent mb-6">Educación</h3>
+                
+                <div className="space-y-6">
+                  <div className="border-l-2 border-accent pl-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="font-serif text-xl md:text-2xl text-stone-900 dark:text-stone-50">
+                        ASIR - Ciclo Superior
+                      </h4>
+                      <span className="text-xs text-stone-500">2024-2026</span>
+                    </div>
+                    <p className="text-sm text-stone-600 dark:text-stone-400">
+                      Administración de Sistemas Informáticos en Red
+                    </p>
+                    <p className="text-xs text-stone-500 mt-2">
+                      Segundo año - En curso
+                    </p>
+                  </div>
+
+                  <div className="border-l-2 border-stone-300 dark:border-stone-700 pl-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="font-serif text-xl md:text-2xl text-stone-900 dark:text-stone-50">
+                        ASIR - Primer Año
+                      </h4>
+                      <span className="text-xs text-stone-500">2023-2024</span>
+                    </div>
+                    <p className="text-sm text-stone-600 dark:text-stone-400">
+                      Fundamentos de sistemas, redes y bases de datos
+                    </p>
+                    <p className="text-xs text-stone-500 mt-2">
+                      Completado con mención honorífica
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Certificaciones y Cursos */}
+              <div className="space-y-6">
+                <h3 className="text-sm tracking-[0.2em] uppercase text-accent mb-6">Certificaciones y Cursos</h3>
+                
+                <div className="space-y-4">
+                  <div className="p-4 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="text-sm md:text-base font-medium text-stone-900 dark:text-stone-50">
+                        Cisco CCNA (En proceso)
+                      </h4>
+                      <span className="text-xs text-accent">2026</span>
+                    </div>
+                    <p className="text-xs text-stone-600 dark:text-stone-400">
+                      Routing & Switching, Network Fundamentals
+                    </p>
+                  </div>
+
+                  <div className="p-4 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="text-sm md:text-base font-medium text-stone-900 dark:text-stone-50">
+                        Linux Professional (LPI)
+                      </h4>
+                      <span className="text-xs text-accent">2025</span>
+                    </div>
+                    <p className="text-xs text-stone-600 dark:text-stone-400">
+                      Administración de sistemas Linux, shell scripting
+                    </p>
+                  </div>
+
+                  <div className="p-4 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="text-sm md:text-base font-medium text-stone-900 dark:text-stone-50">
+                        Docker & Kubernetes
+                      </h4>
+                      <span className="text-xs text-accent">2025</span>
+                    </div>
+                    <p className="text-xs text-stone-600 dark:text-stone-400">
+                      Contenedores, orquestación, DevOps
+                    </p>
+                  </div>
+
+                  <div className="p-4 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="text-sm md:text-base font-medium text-stone-900 dark:text-stone-50">
+                        Ciberseguridad Básica
+                      </h4>
+                      <span className="text-xs text-accent">2024</span>
+                    </div>
+                    <p className="text-xs text-stone-600 dark:text-stone-400">
+                      Pentesting, hardening, IDS/IPS
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Habilidades técnicas adicionales */}
+            <div className="mt-12 md:mt-16 p-8 md:p-12 bg-stone-100 dark:bg-stone-900 border-l-4 border-accent">
+              <h3 className="text-sm tracking-[0.2em] uppercase text-accent mb-6">Otras Habilidades</h3>
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div>
+                  <h4 className="text-sm font-medium text-stone-900 dark:text-stone-50 mb-2">DevOps</h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400">
+                    Git, CI/CD, Terraform, Ansible
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-stone-900 dark:text-stone-50 mb-2">Monitorización</h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400">
+                    Nagios, Zabbix, Prometheus, Grafana
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-stone-900 dark:text-stone-50 mb-2">Scripting</h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400">
+                    Bash, Python, PowerShell
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-stone-900 dark:text-stone-50 mb-2">Web</h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400">
+                    HTML, CSS, JavaScript, React, Next.js
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-stone-900 dark:text-stone-50 mb-2">Bases de Datos</h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400">
+                    MySQL, PostgreSQL, MongoDB
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-stone-900 dark:text-stone-50 mb-2">Cloud</h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400">
+                    AWS, Azure, Digital Ocean
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </div>

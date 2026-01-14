@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { TerminalIcon } from "@/components/Icons";
+import { TerminalIcon, GithubIcon } from "@/components/Icons";
 import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
 
@@ -14,19 +14,112 @@ export default function Proyectos() {
       id: 1,
       titulo: "Infraestructura de Red Corporativa",
       categoria: "estudio",
-      descripcion: "Diseño e implementación de una infraestructura de red para una empresa mediana, incluyendo VLANs, routing y seguridad perimetral.",
-      tecnologias: ["Cisco", "VLANs", "Routing", "Firewall"],
+      descripcion: "Diseño e implementación completa de una infraestructura de red para una empresa mediana, incluyendo segmentación con VLANs, routing dinámico, seguridad perimetral con firewall y políticas de acceso. Proyecto de fin de ciclo enfocado en soluciones empresariales escalables.",
+      tecnologias: ["Cisco", "VLANs", "OSPF", "Firewall", "ACLs", "Packet Tracer"],
       año: "2026",
+      github: "",
+      demo: "",
+      detalles: "Red empresarial de 3 plantas con 150+ dispositivos, segmentación por departamentos, redundancia y alta disponibilidad."
     },
     {
       id: 2,
       titulo: "Automatización con Ansible",
       categoria: "personal",
-      descripcion: "Scripts de automatización para despliegue y configuración de servidores Linux usando Ansible y Docker.",
-      tecnologias: ["Ansible", "Docker", "Linux", "Bash"],
+      descripcion: "Suite completa de playbooks de Ansible para automatizar el despliegue, configuración y mantenimiento de servidores Linux. Incluye aprovisionamiento de contenedores Docker, gestión de usuarios, configuración de servicios y monitorización básica.",
+      tecnologias: ["Ansible", "Docker", "Linux", "Bash", "Python", "YAML"],
       año: "2025",
+      github: "https://github.com/dangkid",
+      demo: "",
+      detalles: "Más de 20 playbooks para diferentes escenarios: web servers, bases de datos, reverse proxies, etc."
     },
-    // Aquí podrás agregar más proyectos
+    {
+      id: 3,
+      titulo: "Clúster de Kubernetes Local",
+      categoria: "personal",
+      descripcion: "Implementación de un clúster de Kubernetes en local usando Minikube para aprender orquestación de contenedores, deployments, services, ingress controllers y persistent volumes. Incluye aplicaciones de ejemplo con CI/CD.",
+      tecnologias: ["Kubernetes", "Docker", "Helm", "Minikube", "kubectl"],
+      año: "2025",
+      github: "https://github.com/dangkid",
+      demo: "",
+      detalles: "3 nodos workers, monitorización con Prometheus y Grafana, despliegue de apps con Helm charts."
+    },
+    {
+      id: 4,
+      titulo: "Sistema de Monitorización",
+      categoria: "estudio",
+      descripcion: "Implementación de un sistema de monitorización completo para infraestructura IT usando Nagios/Zabbix. Monitorea servidores, servicios, recursos y genera alertas en tiempo real. Dashboard personalizado con métricas clave.",
+      tecnologias: ["Nagios", "Zabbix", "SNMP", "Grafana", "MySQL"],
+      año: "2025",
+      github: "",
+      demo: "",
+      detalles: "Monitoriza 15+ servidores, 30+ servicios, alertas por email y Telegram, uptime 99.9%."
+    },
+    {
+      id: 5,
+      titulo: "Servidor Web con Alta Disponibilidad",
+      categoria: "estudio",
+      descripcion: "Configuración de un entorno web con alta disponibilidad usando Nginx como load balancer, múltiples servidores web Apache/Nginx, base de datos MySQL en replicación maestro-esclavo y sistema de backup automático.",
+      tecnologias: ["Nginx", "Apache", "MySQL", "HAProxy", "Linux", "Bash"],
+      año: "2025",
+      github: "",
+      demo: "",
+      detalles: "2 servidores web balanceados, replicación de BD, backups diarios automatizados, SSL/TLS."
+    },
+    {
+      id: 6,
+      titulo: "Laboratorio de Seguridad",
+      categoria: "personal",
+      descripcion: "Entorno de laboratorio para practicar seguridad informática: auditorías de red, análisis de tráfico con Wireshark, pentesting básico, hardening de sistemas Linux y configuración de IDS/IPS con Snort.",
+      tecnologias: ["Kali Linux", "Wireshark", "Nmap", "Snort", "Metasploit"],
+      año: "2025",
+      github: "",
+      demo: "",
+      detalles: "VMs aisladas, escenarios de ataque/defensa, documentación de vulnerabilidades encontradas."
+    },
+    {
+      id: 7,
+      titulo: "Backup Automatizado con Restic",
+      categoria: "personal",
+      descripcion: "Sistema de backups automáticos incrementales y cifrados usando Restic, con almacenamiento local y en la nube (S3). Scripts Bash para programación, rotación de copias y verificación de integridad.",
+      tecnologias: ["Restic", "Bash", "Cron", "AWS S3", "Rclone"],
+      año: "2025",
+      github: "https://github.com/dangkid",
+      demo: "",
+      detalles: "Backups diarios incrementales, cifrado AES-256, retención 30 días, restauración automática."
+    },
+    {
+      id: 8,
+      titulo: "Servidor VPN con WireGuard",
+      categoria: "personal",
+      descripcion: "Configuración de servidor VPN moderno y seguro usando WireGuard para acceso remoto. Incluye gestión de claves, configuración de clientes multiplataforma y routing de tráfico seguro.",
+      tecnologias: ["WireGuard", "Linux", "iptables", "UFW"],
+      año: "2024",
+      github: "",
+      demo: "",
+      detalles: "10 clientes configurados, velocidades 500+ Mbps, latencia < 5ms, zero-trust network."
+    },
+    {
+      id: 9,
+      titulo: "Sistema de Logs Centralizado",
+      categoria: "estudio",
+      descripcion: "Implementación de un sistema de gestión de logs centralizado usando ELK Stack (Elasticsearch, Logstash, Kibana). Recolecta, procesa y visualiza logs de múltiples servidores en tiempo real.",
+      tecnologias: ["Elasticsearch", "Logstash", "Kibana", "Filebeat", "Docker"],
+      año: "2024",
+      github: "",
+      demo: "",
+      detalles: "Procesamiento de 10k+ logs/día, dashboards personalizados, alertas automáticas."
+    },
+    {
+      id: 10,
+      titulo: "Infraestructura como Código",
+      categoria: "personal",
+      descripcion: "Proyecto de aprendizaje sobre IaC usando Terraform para aprovisionar infraestructura en AWS: VPCs, subnets, EC2 instances, security groups. Todo versionado con Git y documentado.",
+      tecnologias: ["Terraform", "AWS", "Git", "HCL"],
+      año: "2024",
+      github: "https://github.com/dangkid",
+      demo: "",
+      detalles: "Multi-región, módulos reutilizables, estado remoto en S3, plan/apply automatizado."
+    },
   ];
 
   const proyectosFiltrados = proyectos.filter(p => 
@@ -148,9 +241,16 @@ export default function Proyectos() {
 
                 {/* Contenido del proyecto */}
                 <div className="p-6 md:p-8">
-                  <p className="text-sm md:text-base text-stone-600 dark:text-stone-400 leading-relaxed mb-4 md:mb-6 line-clamp-3">
+                  <p className="text-sm md:text-base text-stone-600 dark:text-stone-400 leading-relaxed mb-4 md:mb-6">
                     {proyecto.descripcion}
                   </p>
+
+                  {/* Detalles adicionales */}
+                  {proyecto.detalles && (
+                    <p className="text-xs md:text-sm text-stone-500 dark:text-stone-500 leading-relaxed mb-4 italic">
+                      📋 {proyecto.detalles}
+                    </p>
+                  )}
 
                   {/* Tecnologías */}
                   <div className="flex flex-wrap gap-1.5 md:gap-2 mb-4 md:mb-6">
@@ -165,11 +265,34 @@ export default function Proyectos() {
                   </div>
 
                   {/* Enlaces */}
-                  <div className="flex gap-3 md:gap-4 text-xs md:text-sm">
-                    <button className="text-accent hover:text-stone-900 dark:hover:text-stone-100 transition-colors flex items-center gap-2">
-                      <span>Ver detalles</span>
-                      <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-                    </button>
+                  <div className="flex flex-wrap gap-3 md:gap-4 text-xs md:text-sm">
+                    {proyecto.github && (
+                      <a 
+                        href={proyecto.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-stone-600 dark:text-stone-400 hover:text-accent transition-colors"
+                      >
+                        <GithubIcon className="w-4 h-4" />
+                        <span>GitHub</span>
+                      </a>
+                    )}
+                    {proyecto.demo && (
+                      <a 
+                        href={proyecto.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent hover:text-stone-900 dark:hover:text-stone-100 transition-colors flex items-center gap-2"
+                      >
+                        <span>Demo</span>
+                        <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+                      </a>
+                    )}
+                    {!proyecto.github && !proyecto.demo && (
+                      <span className="text-stone-500 dark:text-stone-500 italic">
+                        Proyecto académico
+                      </span>
+                    )}
                   </div>
                 </div>
               </article>

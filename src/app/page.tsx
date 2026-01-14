@@ -8,6 +8,9 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import TiltCard from "@/components/TiltCard";
 import MagneticButton from "@/components/MagneticButton";
 import SocialLinks from "@/components/SocialLinks";
+import Timeline from "@/components/Timeline";
+import Stats from "@/components/Stats";
+import ContactForm from "@/components/ContactForm";
 import { PenIcon, BookIcon, TerminalIcon, ImageIcon } from "@/components/Icons";
 
 export default function Home() {
@@ -231,6 +234,193 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Sección de estadísticas */}
+        <section className="py-16 md:py-24 lg:py-32">
+          <RevealOnScroll>
+            <Stats />
+          </RevealOnScroll>
+        </section>
+
+        {/* Sección de últimos escritos destacados */}
+        <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8 bg-stone-100 dark:bg-stone-900">
+          <div className="max-w-7xl mx-auto">
+            <RevealOnScroll>
+              <div className="text-center mb-12 md:mb-20">
+                <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-accent mb-4">
+                  Del Alma al Papel
+                </p>
+                <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-50 mb-6">
+                  Escritos Destacados
+                </h2>
+                <div className="h-px w-24 bg-accent mx-auto" />
+              </div>
+            </RevealOnScroll>
+
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-12">
+              <RevealOnScroll delay={100}>
+                <Link href="/escritos" className="group block p-8 md:p-12 bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-800 hover:border-accent transition-all duration-500 h-full">
+                  <div className="space-y-4 md:space-y-6">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs tracking-[0.2em] uppercase text-accent">Poema</span>
+                      <span className="text-xs text-stone-500">Enero 2026</span>
+                    </div>
+                    <h3 className="font-serif text-2xl md:text-3xl text-stone-900 dark:text-stone-50 group-hover:text-accent transition-colors">
+                      Entre Líneas de Código
+                    </h3>
+                    <div className="h-px w-16 bg-accent group-hover:w-full transition-all duration-500" />
+                    <p className="text-sm md:text-base text-stone-600 dark:text-stone-400 leading-relaxed italic line-clamp-4">
+                      &quot;En el silencio de la noche digital, donde los bytes danzan en perfecta armonía, escribo versos entre paréntesis y puntos y coma. Cada función es una estrofa, cada variable un suspiro contenido en la memoria del tiempo...&quot;
+                    </p>
+                    <div className="flex items-center gap-2 text-xs text-accent group-hover:gap-4 transition-all">
+                      <span>Leer más</span>
+                      <span>→</span>
+                    </div>
+                  </div>
+                </Link>
+              </RevealOnScroll>
+
+              <RevealOnScroll delay={200}>
+                <Link href="/escritos" className="group block p-8 md:p-12 bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-800 hover:border-accent transition-all duration-500 h-full">
+                  <div className="space-y-4 md:space-y-6">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs tracking-[0.2em] uppercase text-accent">Reflexión</span>
+                      <span className="text-xs text-stone-500">Diciembre 2025</span>
+                    </div>
+                    <h3 className="font-serif text-2xl md:text-3xl text-stone-900 dark:text-stone-50 group-hover:text-accent transition-colors">
+                      La Arquitectura del Alma
+                    </h3>
+                    <div className="h-px w-16 bg-accent group-hover:w-full transition-all duration-500" />
+                    <p className="text-sm md:text-base text-stone-600 dark:text-stone-400 leading-relaxed italic line-clamp-4">
+                      &quot;Como un sistema bien estructurado, el alma tiene sus capas: la interfaz que mostramos al mundo, la lógica que gobierna nuestras decisiones, y en lo más profundo, los datos esenciales que definen quiénes somos...&quot;
+                    </p>
+                    <div className="flex items-center gap-2 text-xs text-accent group-hover:gap-4 transition-all">
+                      <span>Leer más</span>
+                      <span>→</span>
+                    </div>
+                  </div>
+                </Link>
+              </RevealOnScroll>
+            </div>
+
+            <RevealOnScroll delay={300}>
+              <div className="text-center">
+                <Link 
+                  href="/escritos"
+                  className="inline-block px-8 py-4 border border-stone-900 dark:border-stone-100 text-stone-900 dark:text-stone-100 hover:bg-stone-900 dark:hover:bg-stone-100 hover:text-stone-50 dark:hover:text-stone-900 transition-all duration-300 text-sm tracking-[0.1em] uppercase"
+                >
+                  Ver Todos los Escritos
+                </Link>
+              </div>
+            </RevealOnScroll>
+          </div>
+        </section>
+
+        {/* Sección de proyectos destacados */}
+        <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8">
+          <div className="max-w-7xl mx-auto">
+            <RevealOnScroll>
+              <div className="text-center mb-12 md:mb-20">
+                <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-accent mb-4">
+                  Trabajo Técnico
+                </p>
+                <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-50 mb-6">
+                  Proyectos Destacados
+                </h2>
+                <div className="h-px w-24 bg-accent mx-auto" />
+              </div>
+            </RevealOnScroll>
+
+            <div className="grid md:grid-cols-3 gap-1 bg-stone-300 dark:bg-stone-700 mb-12">
+              <RevealOnScroll delay={100}>
+                <div className="group bg-stone-50 dark:bg-stone-950 p-8 hover:bg-stone-900 dark:hover:bg-stone-100 transition-colors duration-500 h-full">
+                  <div className="space-y-4">
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <span className="text-xs px-2 py-1 bg-accent/10 text-accent">Docker</span>
+                      <span className="text-xs px-2 py-1 bg-accent/10 text-accent">Linux</span>
+                      <span className="text-xs px-2 py-1 bg-accent/10 text-accent">Nginx</span>
+                    </div>
+                    <h3 className="font-serif text-xl md:text-2xl text-stone-900 dark:text-stone-50 group-hover:text-stone-50 dark:group-hover:text-stone-900 transition-colors">
+                      Infraestructura Web con Contenedores
+                    </h3>
+                    <div className="h-px w-12 bg-accent group-hover:w-full transition-all duration-500" />
+                    <p className="text-sm text-stone-600 dark:text-stone-400 group-hover:text-stone-300 dark:group-hover:text-stone-600 transition-colors line-clamp-3">
+                      Sistema de despliegue automatizado usando Docker Compose para múltiples aplicaciones web con balanceo de carga.
+                    </p>
+                  </div>
+                </div>
+              </RevealOnScroll>
+
+              <RevealOnScroll delay={200}>
+                <div className="group bg-stone-50 dark:bg-stone-950 p-8 hover:bg-stone-900 dark:hover:bg-stone-100 transition-colors duration-500 h-full">
+                  <div className="space-y-4">
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <span className="text-xs px-2 py-1 bg-accent/10 text-accent">Ansible</span>
+                      <span className="text-xs px-2 py-1 bg-accent/10 text-accent">Python</span>
+                      <span className="text-xs px-2 py-1 bg-accent/10 text-accent">Bash</span>
+                    </div>
+                    <h3 className="font-serif text-xl md:text-2xl text-stone-900 dark:text-stone-50 group-hover:text-stone-50 dark:group-hover:text-stone-900 transition-colors">
+                      Automatización de Configuraciones
+                    </h3>
+                    <div className="h-px w-12 bg-accent group-hover:w-full transition-all duration-500" />
+                    <p className="text-sm text-stone-600 dark:text-stone-400 group-hover:text-stone-300 dark:group-hover:text-stone-600 transition-colors line-clamp-3">
+                      Playbooks de Ansible para configuración automática de servidores, usuarios y servicios en entornos de producción.
+                    </p>
+                  </div>
+                </div>
+              </RevealOnScroll>
+
+              <RevealOnScroll delay={300}>
+                <div className="group bg-stone-50 dark:bg-stone-950 p-8 hover:bg-stone-900 dark:hover:bg-stone-100 transition-colors duration-500 h-full">
+                  <div className="space-y-4">
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <span className="text-xs px-2 py-1 bg-accent/10 text-accent">Cisco</span>
+                      <span className="text-xs px-2 py-1 bg-accent/10 text-accent">VLANs</span>
+                      <span className="text-xs px-2 py-1 bg-accent/10 text-accent">Routing</span>
+                    </div>
+                    <h3 className="font-serif text-xl md:text-2xl text-stone-900 dark:text-stone-50 group-hover:text-stone-50 dark:group-hover:text-stone-900 transition-colors">
+                      Diseño de Red Empresarial
+                    </h3>
+                    <div className="h-px w-12 bg-accent group-hover:w-full transition-all duration-500" />
+                    <p className="text-sm text-stone-600 dark:text-stone-400 group-hover:text-stone-300 dark:group-hover:text-stone-600 transition-colors line-clamp-3">
+                      Arquitectura de red segmentada con VLANs, ACLs y protocolos de routing dinámico para empresa mediana.
+                    </p>
+                  </div>
+                </div>
+              </RevealOnScroll>
+            </div>
+
+            <RevealOnScroll delay={400}>
+              <div className="text-center">
+                <Link 
+                  href="/proyectos"
+                  className="inline-block px-8 py-4 border border-stone-900 dark:border-stone-100 text-stone-900 dark:text-stone-100 hover:bg-stone-900 dark:hover:bg-stone-100 hover:text-stone-50 dark:hover:text-stone-900 transition-all duration-300 text-sm tracking-[0.1em] uppercase"
+                >
+                  Ver Todos los Proyectos
+                </Link>
+              </div>
+            </RevealOnScroll>
+          </div>
+        </section>
+
+        {/* Sección de Timeline */}
+        <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8 bg-stone-100 dark:bg-stone-900">
+          <div className="max-w-6xl mx-auto">
+            <RevealOnScroll>
+              <div className="text-center mb-16 md:mb-24">
+                <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-accent mb-4">
+                  Mi Trayectoria
+                </p>
+                <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-50 mb-6">
+                  El Camino Recorrido
+                </h2>
+                <div className="h-px w-24 bg-accent mx-auto" />
+              </div>
+            </RevealOnScroll>
+            
+            <Timeline />
+          </div>
+        </section>
+
         {/* Sección de cita inspiradora */}
         <RevealOnScroll>
           <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8">
@@ -247,6 +437,30 @@ export default function Home() {
             </div>
           </section>
         </RevealOnScroll>
+
+        {/* Sección de contacto */}
+        <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8 bg-stone-100 dark:bg-stone-900">
+          <div className="max-w-7xl mx-auto">
+            <RevealOnScroll>
+              <div className="text-center mb-12 md:mb-16">
+                <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-accent mb-4">
+                  Conectemos
+                </p>
+                <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-50 mb-6">
+                  Hablemos
+                </h2>
+                <div className="h-px w-24 bg-accent mx-auto mb-6" />
+                <p className="text-base md:text-lg text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">
+                  Ya sea para colaborar en un proyecto, discutir sobre tecnología o simplemente compartir ideas, estoy aquí.
+                </p>
+              </div>
+            </RevealOnScroll>
+
+            <RevealOnScroll delay={200}>
+              <ContactForm />
+            </RevealOnScroll>
+          </div>
+        </section>
 
         {/* Footer con redes sociales */}
         <footer className="py-12 md:py-16 px-4 md:px-8 border-t border-stone-200 dark:border-stone-800">
