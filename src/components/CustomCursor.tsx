@@ -46,11 +46,11 @@ export default function CustomCursor() {
           left: `${position.x}px`,
           top: `${position.y}px`,
           transform: 'translate(-50%, -50%)',
-          transition: 'transform 0.15s ease-out',
+          transition: 'transform 0.05s ease-out',
         }}
       >
         <div
-          className={`transition-all duration-300 ${
+          className={`transition-all duration-200 ${
             isHovering ? 'scale-150 rotate-45' : 'scale-100'
           }`}
         >
@@ -68,11 +68,11 @@ export default function CustomCursor() {
           left: `${position.x}px`,
           top: `${position.y}px`,
           transform: 'translate(-50%, -50%)',
-          transition: 'all 0.3s cubic-bezier(0.75, 0, 0.27, 1)',
+          transition: 'all 0.15s cubic-bezier(0.75, 0, 0.27, 1)',
         }}
       >
         <div
-          className={`border-2 border-accent rounded-full transition-all duration-300 ${
+          className={`border-2 border-accent rounded-full transition-all duration-200 ${
             isHovering ? 'w-12 h-12 opacity-50' : 'w-8 h-8 opacity-30'
           }`}
         />

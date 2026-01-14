@@ -18,21 +18,21 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: "LinkedIn",
-    url: "#",
+    url: "https://www.linkedin.com/in/olivermagallanes/",
     icon: <LinkedinIcon className="w-5 h-5" />,
-    username: "Oliver Dangelo"
+    username: "Oliver Magallanes"
   },
   {
     name: "Twitter",
-    url: "#",
+    url: "https://x.com/Dangeloheats",
     icon: <TwitterIcon className="w-5 h-5" />,
-    username: "@odangelo"
+    username: "@Dangeloheats"
   },
   {
     name: "Email",
-    url: "mailto:oliver@ejemplo.com",
+    url: "mailto:oliverdangelo.magallanes@gmail.com",
     icon: <EmailIcon className="w-5 h-5" />,
-    username: "oliver@ejemplo.com"
+    username: "oliverdangelo.magallanes@gmail.com"
   },
 ];
 

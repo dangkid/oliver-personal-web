@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import CustomCursor from "@/components/CustomCursor";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Escritos() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
@@ -27,7 +29,9 @@ export default function Escritos() {
   ];
 
   return (
-    <div className="min-h-screen bg-stone-50 dark:bg-stone-950">
+    <div className="min-h-screen bg-stone-50 dark:bg-stone-950 cursor-none md:cursor-none">
+      <CustomCursor />
+      <ScrollProgress />
       {/* Navegación */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4 md:py-6 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-sm border-b border-stone-200 dark:border-stone-800">
         <div className="max-w-7xl mx-auto flex justify-between items-center">

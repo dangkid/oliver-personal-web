@@ -3,10 +3,14 @@
 import Link from "next/link";
 import { GraduationIcon, PenIcon, SparklesIcon, EmailIcon, LinkedinIcon, GithubIcon } from "@/components/Icons";
 import SkillBar from "@/components/SkillBar";
+import CustomCursor from "@/components/CustomCursor";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function SobreMi() {
   return (
-    <div className="min-h-screen bg-stone-50 dark:bg-stone-950">
+    <div className="min-h-screen bg-stone-50 dark:bg-stone-950 cursor-none md:cursor-none">
+      <CustomCursor />
+      <ScrollProgress />
       {/* Navegación */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4 md:py-6 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-sm border-b border-stone-200 dark:border-stone-800">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
@@ -168,11 +172,11 @@ export default function SobreMi() {
 
               {/* Enlaces */}
               <div className="space-y-2 md:space-y-3">
-                <a href="mailto:oliver@ejemplo.com" className="flex items-center gap-3 p-3 md:p-4 border border-stone-300 dark:border-stone-700 hover:border-stone-900 dark:hover:border-stone-100 transition-colors text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100">
+                <a href="mailto:oliverdangelo.magallanes@gmail.com" className="flex items-center gap-3 p-3 md:p-4 border border-stone-300 dark:border-stone-700 hover:border-stone-900 dark:hover:border-stone-100 transition-colors text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100">
                   <EmailIcon className="w-4 h-4 md:w-5 md:h-5" />
                   <span className="text-xs md:text-sm">Contacto</span>
                 </a>
-                <a href="#" className="flex items-center gap-3 p-3 md:p-4 border border-stone-300 dark:border-stone-700 hover:border-stone-900 dark:hover:border-stone-100 transition-colors text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100">
+                <a href="https://www.linkedin.com/in/olivermagallanes/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 md:p-4 border border-stone-300 dark:border-stone-700 hover:border-stone-900 dark:hover:border-stone-100 transition-colors text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100">
                   <LinkedinIcon className="w-4 h-4 md:w-5 md:h-5" />
                   <span className="text-xs md:text-sm">LinkedIn</span>
                 </a>
