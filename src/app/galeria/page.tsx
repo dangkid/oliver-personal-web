@@ -158,7 +158,7 @@ export default function Galeria() {
             <Link href="/galeria" className="text-stone-900 dark:text-stone-100 font-medium">
               Galería
             </Link>
-            <Link href="/sobre-mi" className="hidden md:block text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-all hover:tracking-wider">
+            <Link href="/sobre-mi" className="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-all hover:tracking-wider">
               Sobre mí
             </Link>
           </div>
