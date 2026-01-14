@@ -2,6 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import CustomCursor from "@/components/CustomCursor";
+import ScrollProgress from "@/components/ScrollProgress";
+import RevealOnScroll from "@/components/RevealOnScroll";
+import TiltCard from "@/components/TiltCard";
+import MagneticButton from "@/components/MagneticButton";
+import SocialLinks from "@/components/SocialLinks";
+import { PenIcon, BookIcon, TerminalIcon, ImageIcon } from "@/components/Icons";
 
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -19,7 +26,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-stone-50 dark:bg-stone-950 relative overflow-hidden">
+    <div className="min-h-screen bg-stone-50 dark:bg-stone-950 relative overflow-hidden cursor-none md:cursor-none">
+      {/* Componentes interactivos globales */}
+      <CustomCursor />
+      <ScrollProgress />
+      
       {/* Efecto de fondo interactivo */}
       <div 
         className="fixed inset-0 pointer-events-none opacity-30"
@@ -81,7 +92,7 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 md:gap-6 pt-4 md:pt-6">
-                <Link 
+                <MagneticButton 
                   href="/escritos"
                   className="group relative px-6 md:px-8 py-3 md:py-4 overflow-hidden text-center"
                 >
@@ -89,13 +100,13 @@ export default function Home() {
                   <span className="relative z-10 text-sm md:text-base text-stone-900 dark:text-stone-100 group-hover:text-stone-50 dark:group-hover:text-stone-900 transition-colors duration-300">
                     Leer mis escritos
                   </span>
-                </Link>
-                <Link 
+                </MagneticButton>
+                <MagneticButton 
                   href="/proyectos"
                   className="px-6 md:px-8 py-3 md:py-4 text-sm md:text-base border border-stone-300 dark:border-stone-700 hover:border-stone-900 dark:hover:border-stone-100 transition-colors text-center"
                 >
                   Ver proyectos
-                </Link>
+                </MagneticButton>
               </div>
             </div>
 
@@ -118,6 +129,10 @@ export default function Home() {
                 </video>
                 {/* Overlay oscuro sutil */}
                 <div className="absolute inset-0 bg-stone-900/20 dark:bg-stone-950/30 group-hover:bg-stone-900/10 dark:group-hover:bg-stone-950/20 transition-all duration-500" />
+                {/* Icono overlay */}
+                <div className="absolute top-6 right-6 text-stone-50/70 group-hover:text-stone-50 transition-colors duration-500">
+                  <PenIcon className="w-8 h-8 md:w-10 md:h-10" />
+                </div>
                 {/* Texto overlay */}
                 <div className="absolute inset-0 flex items-end justify-center p-6 md:p-8">
                   <div className="text-center space-y-2 md:space-y-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -137,101 +152,125 @@ export default function Home() {
         {/* Sección de especialidades - Grid artístico */}
         <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8 bg-stone-100 dark:bg-stone-900">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-center mb-12 md:mb-20 text-stone-900 dark:text-stone-50 px-4">
-              Un viaje entre dos mundos
-            </h2>
+            <RevealOnScroll>
+              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-center mb-12 md:mb-20 text-stone-900 dark:text-stone-50 px-4">
+                Un viaje entre dos mundos
+              </h2>
+            </RevealOnScroll>
 
             <div className="grid md:grid-cols-3 gap-1 bg-stone-300 dark:bg-stone-700">
               {/* Card 1 - Escritos */}
-              <Link href="/escritos" className="group bg-stone-50 dark:bg-stone-950 p-8 md:p-12 hover:bg-stone-900 dark:hover:bg-stone-50 transition-colors duration-500">
-                <div className="space-y-4 md:space-y-6">
-                  <div className="text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-500">📝</div>
-                  <h3 className="font-serif text-2xl md:text-3xl text-stone-900 dark:text-stone-50 group-hover:text-stone-50 dark:group-hover:text-stone-900 transition-colors">
-                    Escritos
-                  </h3>
-                  <div className="h-px w-16 bg-accent group-hover:w-full transition-all duration-500" />
-                  <p className="text-sm md:text-base text-stone-600 dark:text-stone-400 group-hover:text-stone-300 dark:group-hover:text-stone-600 transition-colors leading-relaxed">
-                    Poemas y reflexiones que exploran la condición humana, la tecnología y el arte.
-                  </p>
-                  <div className="text-xs md:text-sm text-accent group-hover:text-stone-400 transition-colors pt-4">
-                    Explorar →
-                  </div>
-                </div>
-              </Link>
+              <RevealOnScroll delay={100}>
+                <TiltCard>
+                  <Link href="/escritos" className="block group bg-stone-50 dark:bg-stone-950 p-8 md:p-12 hover:bg-stone-900 dark:hover:bg-stone-50 transition-colors duration-500 h-full">
+                    <div className="space-y-4 md:space-y-6">
+                      <div className="text-stone-600 dark:text-stone-400 group-hover:text-stone-50 dark:group-hover:text-stone-900 group-hover:scale-110 transition-all duration-500">
+                        <BookIcon className="w-12 h-12 md:w-14 md:h-14" />
+                      </div>
+                      <h3 className="font-serif text-2xl md:text-3xl text-stone-900 dark:text-stone-50 group-hover:text-stone-50 dark:group-hover:text-stone-900 transition-colors">
+                        Escritos
+                      </h3>
+                      <div className="h-px w-16 bg-accent group-hover:w-full transition-all duration-500" />
+                      <p className="text-sm md:text-base text-stone-600 dark:text-stone-400 group-hover:text-stone-300 dark:group-hover:text-stone-600 transition-colors leading-relaxed">
+                        Poemas y reflexiones que exploran la condición humana, la tecnología y el arte.
+                      </p>
+                      <div className="text-xs md:text-sm text-accent group-hover:text-stone-400 transition-colors pt-4">
+                        Explorar →
+                      </div>
+                    </div>
+                  </Link>
+                </TiltCard>
+              </RevealOnScroll>
 
               {/* Card 2 - Proyectos */}
-              <Link href="/proyectos" className="group bg-stone-50 dark:bg-stone-950 p-8 md:p-12 hover:bg-stone-900 dark:hover:bg-stone-50 transition-colors duration-500">
-                <div className="space-y-4 md:space-y-6">
-                  <div className="text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-500">💻</div>
-                  <h3 className="font-serif text-2xl md:text-3xl text-stone-900 dark:text-stone-50 group-hover:text-stone-50 dark:group-hover:text-stone-900 transition-colors">
-                    Proyectos
-                  </h3>
-                  <div className="h-px w-16 bg-accent group-hover:w-full transition-all duration-500" />
-                  <p className="text-sm md:text-base text-stone-600 dark:text-stone-400 group-hover:text-stone-300 dark:group-hover:text-stone-600 transition-colors leading-relaxed">
-                    Soluciones técnicas en ASIR: redes, sistemas, virtualización y automatización.
-                  </p>
-                  <div className="text-xs md:text-sm text-accent group-hover:text-stone-400 transition-colors pt-4">
-                    Ver trabajos →
-                  </div>
-                </div>
-              </Link>
+              <RevealOnScroll delay={200}>
+                <TiltCard>
+                  <Link href="/proyectos" className="block group bg-stone-50 dark:bg-stone-950 p-8 md:p-12 hover:bg-stone-900 dark:hover:bg-stone-50 transition-colors duration-500 h-full">
+                    <div className="space-y-4 md:space-y-6">
+                      <div className="text-stone-600 dark:text-stone-400 group-hover:text-stone-50 dark:group-hover:text-stone-900 group-hover:scale-110 transition-all duration-500">
+                        <TerminalIcon className="w-12 h-12 md:w-14 md:h-14" />
+                      </div>
+                      <h3 className="font-serif text-2xl md:text-3xl text-stone-900 dark:text-stone-50 group-hover:text-stone-50 dark:group-hover:text-stone-900 transition-colors">
+                        Proyectos
+                      </h3>
+                      <div className="h-px w-16 bg-accent group-hover:w-full transition-all duration-500" />
+                      <p className="text-sm md:text-base text-stone-600 dark:text-stone-400 group-hover:text-stone-300 dark:group-hover:text-stone-600 transition-colors leading-relaxed">
+                        Soluciones técnicas en ASIR: redes, sistemas, virtualización y automatización.
+                      </p>
+                      <div className="text-xs md:text-sm text-accent group-hover:text-stone-400 transition-colors pt-4">
+                        Ver trabajos →
+                      </div>
+                    </div>
+                  </Link>
+                </TiltCard>
+              </RevealOnScroll>
 
               {/* Card 3 - Galería */}
-              <Link href="/galeria" className="group bg-stone-50 dark:bg-stone-950 p-8 md:p-12 hover:bg-stone-900 dark:hover:bg-stone-50 transition-colors duration-500">
-                <div className="space-y-4 md:space-y-6">
-                  <div className="text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-500">📸</div>
-                  <h3 className="font-serif text-2xl md:text-3xl text-stone-900 dark:text-stone-50 group-hover:text-stone-50 dark:group-hover:text-stone-900 transition-colors">
-                    Galería
-                  </h3>
-                  <div className="h-px w-16 bg-accent group-hover:w-full transition-all duration-500" />
-                  <p className="text-sm md:text-base text-stone-600 dark:text-stone-400 group-hover:text-stone-300 dark:group-hover:text-stone-600 transition-colors leading-relaxed">
-                    Viajes, momentos e imágenes que alimentan la creatividad y la inspiración.
-                  </p>
-                  <div className="text-xs md:text-sm text-accent group-hover:text-stone-400 transition-colors pt-4">
-                    Descubrir →
-                  </div>
-                </div>
-              </Link>
+              <RevealOnScroll delay={300}>
+                <TiltCard>
+                  <Link href="/galeria" className="block group bg-stone-50 dark:bg-stone-950 p-8 md:p-12 hover:bg-stone-900 dark:hover:bg-stone-50 transition-colors duration-500 h-full">
+                    <div className="space-y-4 md:space-y-6">
+                      <div className="text-stone-600 dark:text-stone-400 group-hover:text-stone-50 dark:group-hover:text-stone-900 group-hover:scale-110 transition-all duration-500">
+                        <ImageIcon className="w-12 h-12 md:w-14 md:h-14" />
+                      </div>
+                      <h3 className="font-serif text-2xl md:text-3xl text-stone-900 dark:text-stone-50 group-hover:text-stone-50 dark:group-hover:text-stone-900 transition-colors">
+                        Galería
+                      </h3>
+                      <div className="h-px w-16 bg-accent group-hover:w-full transition-all duration-500" />
+                      <p className="text-sm md:text-base text-stone-600 dark:text-stone-400 group-hover:text-stone-300 dark:group-hover:text-stone-600 transition-colors leading-relaxed">
+                        Viajes, momentos e imágenes que alimentan la creatividad y la inspiración.
+                      </p>
+                      <div className="text-xs md:text-sm text-accent group-hover:text-stone-400 transition-colors pt-4">
+                        Descubrir →
+                      </div>
+                    </div>
+                  </Link>
+                </TiltCard>
+              </RevealOnScroll>
             </div>
           </div>
         </section>
 
         {/* Sección de cita inspiradora */}
-        <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8">
-          <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
-            <p className="font-serif text-2xl md:text-4xl lg:text-5xl italic text-stone-800 dark:text-stone-200 leading-relaxed px-4">
-              &quot;En cada línea de código encuentro ritmo,
-              <br className="hidden sm:block" />
-              en cada verso descubro estructura&quot;
-            </p>
-            <div className="h-px w-24 md:w-32 bg-accent mx-auto" />
-            <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-accent-light">
-              Filosofía Personal
-            </p>
-          </div>
-        </section>
-
-        {/* Footer minimalista */}
-        <footer className="py-12 md:py-16 px-4 md:px-8 border-t border-stone-200 dark:border-stone-800">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="text-center md:text-left">
-              <p className="text-xs md:text-sm text-stone-600 dark:text-stone-400">
-                © 2026 Oliver Dangelo Magallanes Espinoza
+        <RevealOnScroll>
+          <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8">
+            <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
+              <p className="font-serif text-2xl md:text-4xl lg:text-5xl italic text-stone-800 dark:text-stone-200 leading-relaxed px-4">
+                &quot;En cada línea de código encuentro ritmo,
+                <br className="hidden sm:block" />
+                en cada verso descubro estructura&quot;
               </p>
-              <p className="text-xs text-stone-500 dark:text-stone-500 mt-1">
-                Diseñado con ♥ y código
+              <div className="h-px w-24 md:w-32 bg-accent mx-auto" />
+              <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-accent">
+                Filosofía Personal
               </p>
             </div>
-            <div className="flex gap-6 md:gap-8 text-xs md:text-sm">
-              <a href="mailto:oliver@ejemplo.com" className="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors">
-                Contacto
-              </a>
-              <a href="#" className="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors">
-                GitHub
-              </a>
-              <a href="#" className="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors">
-                LinkedIn
-              </a>
+          </section>
+        </RevealOnScroll>
+
+        {/* Footer con redes sociales */}
+        <footer className="py-12 md:py-16 px-4 md:px-8 border-t border-stone-200 dark:border-stone-800">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col items-center gap-8">
+              {/* Redes sociales */}
+              <RevealOnScroll>
+                <div className="text-center space-y-4">
+                  <p className="text-xs tracking-[0.2em] uppercase text-stone-500 dark:text-stone-500">
+                    Conecta conmigo
+                  </p>
+                  <SocialLinks />
+                </div>
+              </RevealOnScroll>
+              
+              {/* Copyright */}
+              <div className="text-center pt-8 border-t border-stone-200 dark:border-stone-800 w-full">
+                <p className="text-xs md:text-sm text-stone-600 dark:text-stone-400">
+                  © 2026 Oliver Dangelo Magallanes Espinoza
+                </p>
+                <p className="text-xs text-stone-500 dark:text-stone-500 mt-2">
+                  Donde el arte se encuentra con la tecnología
+                </p>
+              </div>
             </div>
           </div>
         </footer>

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { CameraIcon } from "@/components/Icons";
 
 export default function Galeria() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -249,7 +250,9 @@ export default function Galeria() {
           {/* Nota informativa */}
           <div className="mt-20 p-12 border border-stone-200 dark:border-stone-800 text-center">
             <div className="max-w-2xl mx-auto space-y-4">
-              <div className="text-4xl mb-4">🎨</div>
+              <div className="flex justify-center text-stone-600 dark:text-stone-400 mb-4">
+                <CameraIcon className="w-10 h-10 md:w-12 md:h-12" />
+              </div>
               <p className="font-serif text-2xl italic text-stone-700 dark:text-stone-300">
                 &quot;Cada imagen cuenta una historia,
                 <br />

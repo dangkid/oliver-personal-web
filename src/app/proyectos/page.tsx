@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { TerminalIcon } from "@/components/Icons";
 
 export default function Proyectos() {
   const [filter, setFilter] = useState<"todos" | "estudio" | "personal">("todos");
@@ -174,7 +175,9 @@ export default function Proyectos() {
           {/* Nota informativa */}
           <div className="mt-12 md:mt-20 p-6 md:p-12 border border-stone-200 dark:border-stone-800 text-center">
             <div className="max-w-2xl mx-auto space-y-3 md:space-y-4">
-              <div className="text-3xl md:text-4xl mb-3 md:mb-4">💻</div>
+              <div className="flex justify-center text-stone-600 dark:text-stone-400 mb-3 md:mb-4">
+                <TerminalIcon className="w-10 h-10 md:w-12 md:h-12" />
+              </div>
               <p className="font-serif text-lg md:text-2xl italic text-stone-700 dark:text-stone-300 px-4">
                 &quot;Cada proyecto es una oportunidad de aprender,
                 <br className="hidden sm:block" />

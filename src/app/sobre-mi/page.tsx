@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { GraduationIcon, PenIcon, SparklesIcon, EmailIcon, LinkedinIcon, GithubIcon } from "@/components/Icons";
+import SkillBar from "@/components/SkillBar";
 
 export default function SobreMi() {
   return (
@@ -67,7 +69,9 @@ export default function SobreMi() {
               {/* Sección ASIR */}
               <div className="space-y-4 md:space-y-6">
                 <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
-                  <div className="text-3xl md:text-4xl">🎓</div>
+                  <div className="text-stone-600 dark:text-stone-400">
+                    <GraduationIcon className="w-8 h-8 md:w-10 md:h-10" />
+                  </div>
                   <h3 className="font-serif text-2xl md:text-3xl text-stone-900 dark:text-stone-50">
                     Estudiante de ASIR
                   </h3>
@@ -77,21 +81,22 @@ export default function SobreMi() {
                   Apasionado por la infraestructura IT, virtualización, redes y seguridad.
                   Cada sistema que configuro es como escribir un nuevo capítulo técnico.
                 </p>
-                <div className="pl-10 md:pl-16 pt-3 md:pt-4">
-                  <div className="flex flex-wrap gap-1.5 md:gap-2">
-                    {["Linux", "Redes", "Docker", "Ansible", "Seguridad", "Cloud"].map((skill) => (
-                      <span key={skill} className="px-2 md:px-3 py-1 text-[10px] md:text-xs font-mono border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                <div className="pl-10 md:pl-16 pt-3 md:pt-4 space-y-3">
+                  <SkillBar skill="Linux & Bash" percentage={85} delay={100} />
+                  <SkillBar skill="Redes & Cisco" percentage={78} delay={200} />
+                  <SkillBar skill="Docker & Kubernetes" percentage={72} delay={300} />
+                  <SkillBar skill="Ansible & Automatización" percentage={68} delay={400} />
+                  <SkillBar skill="Seguridad IT" percentage={75} delay={500} />
+                  <SkillBar skill="Cloud (AWS/Azure)" percentage={65} delay={600} />
                 </div>
               </div>
 
               {/* Sección Escritor */}
               <div className="space-y-4 md:space-y-6">
                 <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
-                  <div className="text-3xl md:text-4xl">✍️</div>
+                  <div className="text-stone-600 dark:text-stone-400">
+                    <PenIcon className="w-8 h-8 md:w-10 md:h-10" />
+                  </div>
                   <h3 className="font-serif text-2xl md:text-3xl text-stone-900 dark:text-stone-50">
                     Escritor
                   </h3>
@@ -106,7 +111,9 @@ export default function SobreMi() {
               {/* Filosofía */}
               <div className="p-6 md:p-8 bg-stone-100 dark:bg-stone-900 border-l-4 border-accent">
                 <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
-                  <div className="text-3xl md:text-4xl">🌟</div>
+                  <div className="text-stone-600 dark:text-stone-400">
+                    <SparklesIcon className="w-8 h-8 md:w-10 md:h-10" />
+                  </div>
                   <h3 className="font-serif text-2xl md:text-3xl text-stone-900 dark:text-stone-50">
                     Mi Visión
                   </h3>
@@ -161,14 +168,17 @@ export default function SobreMi() {
 
               {/* Enlaces */}
               <div className="space-y-2 md:space-y-3">
-                <a href="mailto:oliver@ejemplo.com" className="block p-3 md:p-4 border border-stone-300 dark:border-stone-700 hover:border-stone-900 dark:hover:border-stone-100 transition-colors text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100">
-                  <span className="text-xs md:text-sm">📧 Contacto</span>
+                <a href="mailto:oliver@ejemplo.com" className="flex items-center gap-3 p-3 md:p-4 border border-stone-300 dark:border-stone-700 hover:border-stone-900 dark:hover:border-stone-100 transition-colors text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100">
+                  <EmailIcon className="w-4 h-4 md:w-5 md:h-5" />
+                  <span className="text-xs md:text-sm">Contacto</span>
                 </a>
-                <a href="#" className="block p-3 md:p-4 border border-stone-300 dark:border-stone-700 hover:border-stone-900 dark:hover:border-stone-100 transition-colors text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100">
-                  <span className="text-xs md:text-sm">💼 LinkedIn</span>
+                <a href="#" className="flex items-center gap-3 p-3 md:p-4 border border-stone-300 dark:border-stone-700 hover:border-stone-900 dark:hover:border-stone-100 transition-colors text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100">
+                  <LinkedinIcon className="w-4 h-4 md:w-5 md:h-5" />
+                  <span className="text-xs md:text-sm">LinkedIn</span>
                 </a>
-                <a href="#" className="block p-3 md:p-4 border border-stone-300 dark:border-stone-700 hover:border-stone-900 dark:hover:border-stone-100 transition-colors text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100">
-                  <span className="text-xs md:text-sm">🐙 GitHub</span>
+                <a href="https://github.com/dangkid" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 md:p-4 border border-stone-300 dark:border-stone-700 hover:border-stone-900 dark:hover:border-stone-100 transition-colors text-stone-700 dark:text-stone-300 hover:text-stone-900 dark:hover:text-stone-100">
+                  <GithubIcon className="w-4 h-4 md:w-5 md:h-5" />
+                  <span className="text-xs md:text-sm">GitHub</span>
                 </a>
               </div>
             </div>
