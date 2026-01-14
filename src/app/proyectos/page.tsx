@@ -9,116 +9,51 @@ import ScrollProgress from "@/components/ScrollProgress";
 export default function Proyectos() {
   const [filter, setFilter] = useState<"todos" | "estudio" | "personal">("todos");
 
+  // PLANTILLAS DE PROYECTOS - Reemplaza con tus proyectos reales
   const proyectos = [
     {
       id: 1,
-      titulo: "Infraestructura de Red Corporativa",
-      categoria: "estudio",
-      descripcion: "Diseño e implementación completa de una infraestructura de red para una empresa mediana, incluyendo segmentación con VLANs, routing dinámico, seguridad perimetral con firewall y políticas de acceso. Proyecto de fin de ciclo enfocado en soluciones empresariales escalables.",
-      tecnologias: ["Cisco", "VLANs", "OSPF", "Firewall", "ACLs", "Packet Tracer"],
+      titulo: "[Nombre de tu Proyecto 1]",
+      categoria: "estudio", // o "personal"
+      descripcion: "Descripción breve del proyecto. Explica qué hiciste, qué problema resolviste y qué aprendiste.",
+      tecnologias: ["Tecnología1", "Tecnología2", "Tecnología3"],
       año: "2026",
-      github: "",
-      demo: "",
-      detalles: "Red empresarial de 3 plantas con 150+ dispositivos, segmentación por departamentos, redundancia y alta disponibilidad."
+      github: "", // Opcional: URL de GitHub si lo tienes
+      demo: "", // Opcional: URL de demo si aplica
+      detalles: "Detalles técnicos específicos del proyecto."
     },
     {
       id: 2,
-      titulo: "Automatización con Ansible",
-      categoria: "personal",
-      descripcion: "Suite completa de playbooks de Ansible para automatizar el despliegue, configuración y mantenimiento de servidores Linux. Incluye aprovisionamiento de contenedores Docker, gestión de usuarios, configuración de servicios y monitorización básica.",
-      tecnologias: ["Ansible", "Docker", "Linux", "Bash", "Python", "YAML"],
+      titulo: "[Nombre de tu Proyecto 2]",
+      categoria: "estudio",
+      descripcion: "Descripción breve del proyecto. Explica qué hiciste, qué problema resolviste y qué aprendiste.",
+      tecnologias: ["Tecnología1", "Tecnología2", "Tecnología3"],
       año: "2025",
-      github: "https://github.com/dangkid",
+      github: "",
       demo: "",
-      detalles: "Más de 20 playbooks para diferentes escenarios: web servers, bases de datos, reverse proxies, etc."
+      detalles: "Detalles técnicos específicos del proyecto."
     },
     {
       id: 3,
-      titulo: "Clúster de Kubernetes Local",
+      titulo: "[Nombre de tu Proyecto 3]",
       categoria: "personal",
-      descripcion: "Implementación de un clúster de Kubernetes en local usando Minikube para aprender orquestación de contenedores, deployments, services, ingress controllers y persistent volumes. Incluye aplicaciones de ejemplo con CI/CD.",
-      tecnologias: ["Kubernetes", "Docker", "Helm", "Minikube", "kubectl"],
+      descripcion: "Descripción breve del proyecto. Explica qué hiciste, qué problema resolviste y qué aprendiste.",
+      tecnologias: ["Tecnología1", "Tecnología2", "Tecnología3"],
       año: "2025",
-      github: "https://github.com/dangkid",
+      github: "",
       demo: "",
-      detalles: "3 nodos workers, monitorización con Prometheus y Grafana, despliegue de apps con Helm charts."
+      detalles: "Detalles técnicos específicos del proyecto."
     },
     {
       id: 4,
-      titulo: "Sistema de Monitorización",
-      categoria: "estudio",
-      descripcion: "Implementación de un sistema de monitorización completo para infraestructura IT usando Nagios/Zabbix. Monitorea servidores, servicios, recursos y genera alertas en tiempo real. Dashboard personalizado con métricas clave.",
-      tecnologias: ["Nagios", "Zabbix", "SNMP", "Grafana", "MySQL"],
+      titulo: "[Nombre de tu Proyecto 4]",
+      categoria: "personal",
+      descripcion: "Descripción breve del proyecto. Explica qué hiciste, qué problema resolviste y qué aprendiste.",
+      tecnologias: ["Tecnología1", "Tecnología2", "Tecnología3"],
       año: "2025",
       github: "",
       demo: "",
-      detalles: "Monitoriza 15+ servidores, 30+ servicios, alertas por email y Telegram, uptime 99.9%."
-    },
-    {
-      id: 5,
-      titulo: "Servidor Web con Alta Disponibilidad",
-      categoria: "estudio",
-      descripcion: "Configuración de un entorno web con alta disponibilidad usando Nginx como load balancer, múltiples servidores web Apache/Nginx, base de datos MySQL en replicación maestro-esclavo y sistema de backup automático.",
-      tecnologias: ["Nginx", "Apache", "MySQL", "HAProxy", "Linux", "Bash"],
-      año: "2025",
-      github: "",
-      demo: "",
-      detalles: "2 servidores web balanceados, replicación de BD, backups diarios automatizados, SSL/TLS."
-    },
-    {
-      id: 6,
-      titulo: "Laboratorio de Seguridad",
-      categoria: "personal",
-      descripcion: "Entorno de laboratorio para practicar seguridad informática: auditorías de red, análisis de tráfico con Wireshark, pentesting básico, hardening de sistemas Linux y configuración de IDS/IPS con Snort.",
-      tecnologias: ["Kali Linux", "Wireshark", "Nmap", "Snort", "Metasploit"],
-      año: "2025",
-      github: "",
-      demo: "",
-      detalles: "VMs aisladas, escenarios de ataque/defensa, documentación de vulnerabilidades encontradas."
-    },
-    {
-      id: 7,
-      titulo: "Backup Automatizado con Restic",
-      categoria: "personal",
-      descripcion: "Sistema de backups automáticos incrementales y cifrados usando Restic, con almacenamiento local y en la nube (S3). Scripts Bash para programación, rotación de copias y verificación de integridad.",
-      tecnologias: ["Restic", "Bash", "Cron", "AWS S3", "Rclone"],
-      año: "2025",
-      github: "https://github.com/dangkid",
-      demo: "",
-      detalles: "Backups diarios incrementales, cifrado AES-256, retención 30 días, restauración automática."
-    },
-    {
-      id: 8,
-      titulo: "Servidor VPN con WireGuard",
-      categoria: "personal",
-      descripcion: "Configuración de servidor VPN moderno y seguro usando WireGuard para acceso remoto. Incluye gestión de claves, configuración de clientes multiplataforma y routing de tráfico seguro.",
-      tecnologias: ["WireGuard", "Linux", "iptables", "UFW"],
-      año: "2024",
-      github: "",
-      demo: "",
-      detalles: "10 clientes configurados, velocidades 500+ Mbps, latencia < 5ms, zero-trust network."
-    },
-    {
-      id: 9,
-      titulo: "Sistema de Logs Centralizado",
-      categoria: "estudio",
-      descripcion: "Implementación de un sistema de gestión de logs centralizado usando ELK Stack (Elasticsearch, Logstash, Kibana). Recolecta, procesa y visualiza logs de múltiples servidores en tiempo real.",
-      tecnologias: ["Elasticsearch", "Logstash", "Kibana", "Filebeat", "Docker"],
-      año: "2024",
-      github: "",
-      demo: "",
-      detalles: "Procesamiento de 10k+ logs/día, dashboards personalizados, alertas automáticas."
-    },
-    {
-      id: 10,
-      titulo: "Infraestructura como Código",
-      categoria: "personal",
-      descripcion: "Proyecto de aprendizaje sobre IaC usando Terraform para aprovisionar infraestructura en AWS: VPCs, subnets, EC2 instances, security groups. Todo versionado con Git y documentado.",
-      tecnologias: ["Terraform", "AWS", "Git", "HCL"],
-      año: "2024",
-      github: "https://github.com/dangkid",
-      demo: "",
-      detalles: "Multi-región, módulos reutilizables, estado remoto en S3, plan/apply automatizado."
+      detalles: "Detalles técnicos específicos del proyecto."
     },
   ];
 

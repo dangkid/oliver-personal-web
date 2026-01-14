@@ -9,10 +9,10 @@ interface StatItem {
 }
 
 const stats: StatItem[] = [
-  { number: 15, label: "Proyectos ASIR", suffix: "+" },
-  { number: 8, label: "Escritos Publicados", suffix: "" },
-  { number: 12, label: "Tecnologías", suffix: "+" },
-  { number: 2, label: "Años Estudiando", suffix: "" }
+  { number: 4, label: "Proyectos", suffix: "" },
+  { number: 6, label: "Escritos", suffix: "" },
+  { number: 10, label: "Tecnologías", suffix: "+" },
+  { number: 2, label: "Años ASIR", suffix: "" }
 ];
 
 export default function Stats() {

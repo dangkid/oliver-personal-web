@@ -205,28 +205,28 @@ export default function SobreMi() {
                       <h4 className="font-serif text-xl md:text-2xl text-stone-900 dark:text-stone-50">
                         ASIR - Ciclo Superior
                       </h4>
-                      <span className="text-xs text-stone-500">2024-2026</span>
+                      <span className="text-xs text-stone-500">Actual</span>
                     </div>
                     <p className="text-sm text-stone-600 dark:text-stone-400">
-                      Administración de Sistemas Informáticos en Red
+                      IES Cura Valera, Huércal-Overa, Almería
                     </p>
                     <p className="text-xs text-stone-500 mt-2">
-                      Segundo año - En curso
+                      Administración de Sistemas Informáticos en Red - En curso
                     </p>
                   </div>
 
                   <div className="border-l-2 border-stone-300 dark:border-stone-700 pl-6">
                     <div className="flex items-center justify-between mb-2">
                       <h4 className="font-serif text-xl md:text-2xl text-stone-900 dark:text-stone-50">
-                        ASIR - Primer Año
+                        Desarrollo de Software
                       </h4>
-                      <span className="text-xs text-stone-500">2023-2024</span>
+                      <span className="text-xs text-stone-500">Abr 2023 - Actual</span>
                     </div>
                     <p className="text-sm text-stone-600 dark:text-stone-400">
-                      Fundamentos de sistemas, redes y bases de datos
+                      Instituto San Ignacio de Loyola, Miraflores, Lima
                     </p>
                     <p className="text-xs text-stone-500 mt-2">
-                      Completado con mención honorífica
+                      Formación en desarrollo de software y programación
                     </p>
                   </div>
                 </div>
@@ -240,59 +240,122 @@ export default function SobreMi() {
                   <div className="p-4 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
                     <div className="flex items-center justify-between mb-2">
                       <h4 className="text-sm md:text-base font-medium text-stone-900 dark:text-stone-50">
-                        Cisco CCNA (En proceso)
-                      </h4>
-                      <span className="text-xs text-accent">2026</span>
-                    </div>
-                    <p className="text-xs text-stone-600 dark:text-stone-400">
-                      Routing & Switching, Network Fundamentals
-                    </p>
-                  </div>
-
-                  <div className="p-4 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="text-sm md:text-base font-medium text-stone-900 dark:text-stone-50">
-                        Linux Professional (LPI)
+                        Ciberseguridad Avanzada
                       </h4>
                       <span className="text-xs text-accent">2025</span>
                     </div>
                     <p className="text-xs text-stone-600 dark:text-stone-400">
-                      Administración de sistemas Linux, shell scripting
+                      Virensis - IFCT0050 Entornos de tecnologías de operación
                     </p>
                   </div>
 
                   <div className="p-4 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
                     <div className="flex items-center justify-between mb-2">
                       <h4 className="text-sm md:text-base font-medium text-stone-900 dark:text-stone-50">
-                        Docker & Kubernetes
+                        Fundamentos de IA
                       </h4>
-                      <span className="text-xs text-accent">2025</span>
+                      <span className="text-xs text-accent">Nov 2025</span>
                     </div>
                     <p className="text-xs text-stone-600 dark:text-stone-400">
-                      Contenedores, orquestación, DevOps
+                      OpenWebinars - 7 horas (Machine Learning, Redes Neuronales, Python)
                     </p>
                   </div>
 
                   <div className="p-4 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
                     <div className="flex items-center justify-between mb-2">
                       <h4 className="text-sm md:text-base font-medium text-stone-900 dark:text-stone-50">
-                        Ciberseguridad Básica
+                        IT Essentials: PC Hardware
                       </h4>
-                      <span className="text-xs text-accent">2024</span>
+                      <span className="text-xs text-accent">Cisco</span>
                     </div>
                     <p className="text-xs text-stone-600 dark:text-stone-400">
-                      Pentesting, hardening, IDS/IPS
+                      Cisco Networking Academy - Hardware y Software
                     </p>
                   </div>
+
+                  <div className="p-4 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="text-sm md:text-base font-medium text-stone-900 dark:text-stone-50">
+                        Introducción a Ciberseguridad
+                      </h4>
+                      <span className="text-xs text-accent">Cisco</span>
+                    </div>
+                    <p className="text-xs text-stone-600 dark:text-stone-400">
+                      Cisco Networking Academy
+                    </p>
+                  </div>
+
+                  <div className="p-4 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="text-sm md:text-base font-medium text-stone-900 dark:text-stone-50">
+                Experiencia profesional */}
+            <div className="mt-12 md:mt-16 p-8 md:p-12 bg-stone-100 dark:bg-stone-900 border-l-4 border-accent">
+              <h3 className="text-sm tracking-[0.2em] uppercase text-accent mb-6">Experiencia</h3>
+              <div className="space-y-4">
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="text-base md:text-lg font-serif text-stone-900 dark:text-stone-50">Soporte Técnico Moodle</h4>
+                    <span className="text-xs text-stone-500">Mar - Jun 2024</span>
+                  </div>
+                  <p className="text-sm font-medium text-stone-700 dark:text-stone-300 mb-2">Zoluciones - Lima, Perú</p>
+                  <p className="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Soporte académico y técnico en plataforma Moodle para UCAL, Toulouse Lautrec y CERTUS.
+                    Resolución de incidencias, gestión de cursos y asistencia a estudiantes y docentes.
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Habilidades técnicas adicionales */}
-            <div className="mt-12 md:mt-16 p-8 md:p-12 bg-stone-100 dark:bg-stone-900 border-l-4 border-accent">
-              <h3 className="text-sm tracking-[0.2em] uppercase text-accent mb-6">Otras Habilidades</h3>
+            {/* Habilidades técnicas */}
+            <div className="mt-8 md:mt-12 p-8 md:p-12 bg-stone-100 dark:bg-stone-900 border-l-4 border-accent">
+              <h3 className="text-sm tracking-[0.2em] uppercase text-accent mb-6">Habilidades Técnicas</h3>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div>
+                  <h4 className="text-sm font-medium text-stone-900 dark:text-stone-50 mb-2">Desarrollo Web</h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400">
+                    React, JavaScript, HTML, CSS, Bootstrap, Sass
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-stone-900 dark:text-stone-50 mb-2">DevOps & Cloud</h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400">
+                    Docker, Kubernetes, AWS, Git
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-stone-900 dark:text-stone-50 mb-2">Redes</h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400">
+                    Switches, Routers, Access Points, Cisco
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-stone-900 dark:text-stone-50 mb-2">Sistemas Operativos</h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400">
+                    Windows, Linux, macOS, Active Directory
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-stone-900 dark:text-stone-50 mb-2">Bases de Datos</h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400">
+                    MySQL, SQL Server
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-stone-900 dark:text-stone-50 mb-2">Virtualización</h4>
+                  <p className="text-xs text-stone-600 dark:text-stone-400">
+                    VirtualBox, Docker, Moodle
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Competencias blandas */}
+            <div className="mt-8 md:mt-12 p-8 md:p-12 bg-stone-100 dark:bg-stone-900 border-l-4 border-accent">
+              <h3 className="text-sm tracking-[0.2em] uppercase text-accent mb-4">Competencias Blandas</h3>
+              <p className="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+                Empatía, trabajo en equipo, resolución de problemas, atención al detalle, comunicación efectiva, 
+                capacidad de aprendizaje continuo y adaptabilidad.
+              </pv>
                   <h4 className="text-sm font-medium text-stone-900 dark:text-stone-50 mb-2">DevOps</h4>
                   <p className="text-xs text-stone-600 dark:text-stone-400">
                     Git, CI/CD, Terraform, Ansible
