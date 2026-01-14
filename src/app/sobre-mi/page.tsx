@@ -288,7 +288,43 @@ export default function SobreMi() {
                   <div className="p-4 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
                     <div className="flex items-center justify-between mb-2">
                       <h4 className="text-sm md:text-base font-medium text-stone-900 dark:text-stone-50">
-                Experiencia profesional */}
+                        Fundamentos de JavaScript
+                      </h4>
+                      <span className="text-xs text-accent">2025</span>
+                    </div>
+                    <p className="text-xs text-stone-600 dark:text-stone-400">
+                      OpenWebinars - Programación web
+                    </p>
+                  </div>
+
+                  <div className="p-4 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="text-sm md:text-base font-medium text-stone-900 dark:text-stone-50">
+                        Sass/SCSS
+                      </h4>
+                      <span className="text-xs text-accent">2025</span>
+                    </div>
+                    <p className="text-xs text-stone-600 dark:text-stone-400">
+                      OpenWebinars - Preprocesador CSS
+                    </p>
+                  </div>
+
+                  <div className="p-4 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="text-sm md:text-base font-medium text-stone-900 dark:text-stone-50">
+                        GitHub Foundations
+                      </h4>
+                      <span className="text-xs text-accent">Preparando</span>
+                    </div>
+                    <p className="text-xs text-stone-600 dark:text-stone-400">
+                      En proceso - Certificación oficial GitHub
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Experiencia profesional */}
             <div className="mt-12 md:mt-16 p-8 md:p-12 bg-stone-100 dark:bg-stone-900 border-l-4 border-accent">
               <h3 className="text-sm tracking-[0.2em] uppercase text-accent mb-6">Experiencia</h3>
               <div className="space-y-4">
